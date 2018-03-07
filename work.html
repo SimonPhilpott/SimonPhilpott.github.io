@@ -40,22 +40,17 @@
                     <a class="nav-link js-scroll-trigger" href="index.html#about">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="index.html#experience">Experience</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="index.html#education">Education</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="index.html#skills">Skills</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="index.html#interests">Interests</a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link js-scroll-trigger" href="work.html">Work</a>
+                    <hr/>
                     <ul class="navbar-nav">
                         <li>
                             <a class="nav-link js-scroll-trigger" href="#filterableTable">Filterable, Sortable tables</a>
+                        </li>
+                        <li>
+                            <a class="nav-link js-scroll-trigger" href="#tooltips">Reactive tooltips</a>
+                        </li>
+                        <li>
+                            <a class="nav-link js-scroll-trigger" href="#pageBookmarkMenu">Dynamic page bookmark menu</a>
                         </li>
                     </ul>
                 </li>
@@ -68,17 +63,23 @@
 
     <div class="container-fluid p-0">
 
-        <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
+        <section class="resume-section p-3 p-lg-5 d-flex d-column">
             <div class="my-auto">
                 <h2 class="mb-5">Work examples</h2>
                 <div class="resume-item d-flex flex-column flex-md-row mb-5">
                     <div class="resume-content mr-auto">
                         <h3 class="mb-0" id="filterableTable">Filterable, sortable tables</h3>
+                        <li class="list-inline-item">
+                            <i class="devicons mini devicons-css3"></i>
+                            <i class="devicons mini devicons-html5"></i>
+                            <i class="devicons mini devicons-javascript"></i>
+                        </li>
                         <p>This projects goal was to extend the user interaction for data tables on a legacy content management system, with very minimal administration required. Requirements were to allow staff to quickly find (in the case of business use)
-                            documents contained within a table and apply filters to the table based on a series of meta data fields. Specification also stated the use of vanilla Javascript with no reliance on libraries</p>
+                            documents contained within a table and apply filters to the table based on a series of meta data fields. Specification stated the use of vanilla Javascript with no reliance on libraries.</p>
                         <p>Extension to this functionality later included sortable columns, specific special character handling, URL pre-filtering on page loading (depending on the custom URL) and the requirement to port this functionality over to a future
                             platform
                         </p>
+                        <hr/>
                         <div id="filter">
                             <div class="filter-wrap">
                                 <table class="table table-dark sortableTable">
@@ -122,7 +123,77 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
+        <section class="resume-section p-3 p-lg-5 d-flex d-column">
+            <div class="my-auto">
 
+                <div class="resume-item d-flex flex-column flex-md-row mb-5">
+                    <div class="resume-content mr-auto">
+                        <h3 class="mb-0" id="tooltips">Responsive tooltips</h3>
+                        <li class="list-inline-item">
+                            <i class="devicons mini devicons-css3"></i>
+                            <i class="devicons mini devicons-html5"></i>
+                            <i class="devicons mini devicons-javascript"></i>
+                        </li>
+                        <p>As part of an upgrade to a business service delivery model an extension to the standard HTML tooltips were required. Tooltips needed to remain responsive to client viewing widths and to contain more content than just standard text.
+                            Specification stated the use of vanilla Javascript with no reliance on libraries.
+                        </p>
+                        <p>Later requirements also included a timed fade out and support for different content page placing and on the fly client window resizing.
+                        </p>
+                        <hr/>
+                        <button type="button" class="btn btn-primary btn-lg" onmouseover="showTooltip('tooltip');" onmouseout="hideTooltip('tooltip2');">Hover over me</button>
+                        <div id="tooltip" class="tooltip shadow"><img src="img/pieChart.png" />
+                            <h3>Tooltip heading</h3>
+                            <p>We worked closely with the Head of Procurement, the Commercial Director and other key stakeholders to Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+                        </div>
+                        <!--the content-->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="resume-section p-3 p-lg-5 d-flex d-column" id="bookmarkExample">
+            <div class="my-auto">
+                <div class="resume-item d-flex flex-column flex-md-row mb-5">
+                    <div class="resume-content mr-auto">
+                        <h3 class="mb-0" id="pageBookmarkMenu">Dynamic page bookmark menu</h3>
+                        <li class="list-inline-item">
+                            <i class="devicons mini devicons-css3"></i>
+                            <i class="devicons mini devicons-html5"></i>
+                            <i class="devicons mini devicons-javascript"></i>
+                        </li>
+                        <p>This piece of development was produced to support a content management project. Senior management strongly wished to address the business perception of a specific intranet area from loose content writing style, into a focused guidebook
+                            that became a more solid part of work ethic.
+                        </p>
+                        <p>The scope of this project was to introduce new tools to a legacy intranet to support users in navigating at times, very large pages of content. I developed a dynamically created page navigation menu that required minimal administration
+                            to implement which supported pre-existing content formatting. Specification stated the use of vanilla Javascript with no reliance on libraries.
+                        </p>
+                        <hr/>
+                        <h3 id="headingA" class="bookmark">Heading 1</h3>
+                        <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur</p>
+                        <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur</p>
+                        <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur</p>
+                        <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur</p>
+                        <h3 id="headingB" class="bookmark">Heading 2</h3>
+                        <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur</p>
+                        <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur</p>
+                        <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur</p>
+                        <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur</p>
+                        <h3 id="headingC" class="bookmark">Heading 3</h3>
+                        <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur</p>
+                        <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur</p>
+                        <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur</p>
+                        <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur</p>
+                        <h3 id="headingD" class="bookmark">Heading 4</h3>
+                        <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur</p>
+                        <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur</p>
+                        <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur</p>
+                        <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur</p>
+                        <div id="bookmarkMenu"></div>
+                        <!--the content-->
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -139,6 +210,8 @@
     <script>
         contentFilter('#filter', 'inclusive');
     </script>
+    <script src="work/responsiveTooltip.js"></script>
+    <script src="work/dynamicNavigationMenu.js"></script>
 
 </body>
 

@@ -1,9 +1,9 @@
 //Build Dynamic Page Bookmark Menu
 var bookmarkSlideoutMenu = document.getElementById("bookmarkMenu");
 if (bookmarkSlideoutMenu) { /*If the bookmark menu is on the page*/
-    bookmarkSlideoutMenu.innerHTML = "<span class='rotate'><img src='/ttintra/KMInfoOnLine2006.nsf/attlibweb/upDownIconpng/$file/upDownIcon.png' id='jumpIcon'>Page bookmarks</span><div id='slideout_inner' class='shadow'><ul></ul></div>"
+    bookmarkSlideoutMenu.innerHTML = "<span class='rotate'>Page bookmarks</span><div id='slideout_inner' class='shadow'><ul></ul></div>"
     var bookmarkContainer = bookmarkSlideoutMenu.getElementsByTagName("ul")[0];
-    var pageBookmarks = [].slice.call(document.querySelectorAll(".icon"));
+    var pageBookmarks = [].slice.call(document.querySelectorAll(".bookmark"));
     var bookMarkTitles = [];
     var bookmarkIDs = [];
     /* Remove the duplicate values*/
@@ -25,10 +25,10 @@ if (bookmarkSlideoutMenu) { /*If the bookmark menu is on the page*/
         newBookmark.appendChild(newBookmarkLink);
         newBookmarkLink.innerText = uniqueBookMarkTitles[i];
         newBookmarkLink.href = "#" + uniqueBookmarkIDs[i];
-        newBookmarkLink.className = "TThotspot";
+        newBookmarkLink.className = "bookmarkLink";
     }
     /*Build the back to top link*/
     var backToTopBookmark = document.createElement("li");
-    backToTopBookmark.innerHTML = "<a class='TThotspot' href='#contentPage'>Back to the top</a>";
+    backToTopBookmark.innerHTML = "<a class='bookmarkLink' href='#pageBookmarkMenu'>Back to the top</a>";
     bookmarkContainer.appendChild(backToTopBookmark);
 }
