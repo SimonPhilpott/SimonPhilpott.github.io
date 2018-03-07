@@ -46,12 +46,6 @@ for (index = cellBreaks.length - 1; index >= 0; index--) {
 (function scanTable() {
     var columns = docTable.getElementsByTagName("th");
     var cells = docTable.getElementsByTagName("td");
-    for (var i = 0; i < cells.length; ++i) {
-        cellImg = cells[i].getElementsByTagName("img")[0];
-        //*FIX* Columns do not require img gifs to size column widths - as per loutus notes output as this is made within the table head, removed as this was breaking the string capture
-        //cellImg.style.marginLeft = "-5px";
-        cellImg.style.display = "none"; // this removes the gif that Lotus notes tables add when sizing table columns by using a gif image?!?!?. 
-    }
     for (var i = 0; i < columns.length; ++i) {
         if (typeof String.prototype.trim != 'function') { // detect native implementation of trim()
             String.prototype.trim = function() {
@@ -77,19 +71,19 @@ for (index = cellBreaks.length - 1; index >= 0; index--) {
             descColumn = true
         }
 
-        window.resetURLFilter = "?OpenDocument&" + filterArray.join('&').toString().replace(/&Client/g, "").replace(/&Dates/g, "");
+        /*window.resetURLFilter = "?OpenDocument&" + filterArray.join('&').toString().replace(/&Client/g, "").replace(/&Dates/g, ""); DISABLED URL FILTERING*/
         break;
     }
 })();
 // can't instate until the arrays syntax matches between IE and Chrome
 //Add the URL string to provide the option to filter via URL
-(function setURL() {
+/*(function setURL() {
     if (document.location.href.indexOf("?OpenDocument") > -1) {
         //Do nothing, the URL filter syntax is already part of the URL
     } else {
         location.replace(URLpath + resetURLFilter);
     }
-})();
+})(); DISABLED URL FILTERING*/
 
 function checkState(checkbox) { // Disables and fades un-selectable checkboxes, then re-enables if de-selected
     var checkboxContainers = checkbox.parentNode.parentNode.getElementsByClassName("inputContainer");
@@ -157,15 +151,15 @@ function contentFilter(filterID, filterType) {
     filterTarget = filterID;
     // create the filter category group titles, containers and checkboxes
     var filterCategories = document.createElement('span');
-    var showHideFilterBtn = document.createElement('a');
+    var showHideFilterBtn = document.createElement('button');
     var appliedFilter = document.createElement('div');
     appliedFilter.setAttribute("id", "appliedFilterList");
-    showHideFilterBtn.setAttribute("class", "button cyan downArrow");
+    showHideFilterBtn.setAttribute("class", "btn btn-default showHide");
     showHideFilterBtn.setAttribute("title", "show/hide the table filter options");
-    showHideFilterBtn.setAttribute("style", "width:220px; margin-bottom:5px;");
+    showHideFilterBtn.setAttribute("type", "button");
     showHideFilterBtn.setAttribute("id", "hideShowTableFilters");
     showHideFilterBtn.setAttribute("onclick", "toggleFilterButton(this); showHideDocFilter()");
-    showHideFilterBtn.innerHTML = "Show the resource table filters<span></span>";
+    showHideFilterBtn.innerHTML = "<strong>Show</strong> the resource table filters";
     filterCategories.setAttribute("class", "filter-categories");
     filterCategories.setAttribute("id", "filterOptions");
     filterCategories.style.display = "block";
@@ -383,14 +377,14 @@ function contentFilter(filterID, filterType) {
         }
     }
     overpopulateRegionSector(docTableRows);
-    var checkboxes = document.querySelectorAll(filterTarget + ' .filter-input'); // Checkbox click event
+    /*var checkboxes = document.querySelectorAll(filterTarget + ' .filter-input'); // Checkbox click event
     for (var i = 1; i < URLfilter.length; ++i) { // Check the URL for filter matches and apply
         for (var j = 1; j < checkboxes.length; ++j) { // ignore the reset checkbox
             if (URLfilter[i] == (checkboxes[j].id)) {
                 checkboxes[j].click();
             }
         }
-    }
+    }*/
     // filter function applied by class
     function filterContent(evt) {
         evt = evt || window.event;
@@ -497,14 +491,72 @@ function showHideDocFilter() {
 }
 
 function toggleFilterButton(el) {
-    if (el.className == "button cyan upArrow") {
-        el.className = "button cyan downArrow";
-        el.innerHTML = "Show the resource table filters<span></span>";
+    if (el.innerHTML === "<strong>Show</strong> the resource table filters") {
+        el.innerHTML = "<strong>Hide</strong> the resource table filters";
     } else {
-        el.className = "button cyan upArrow";
-        el.innerHTML = "Hide the resource table filters<span></span>";
+        el.innerHTML = "<strong>Show</strong> the resource table filters";
     }
 }
 
+/*Sortable table*/
+var tableSort = document.getElementsByClassName("sortableTable")[0];
+if (tableSort) {
+    var sortHeads = tableSort.getElementsByTagName("th");
+    for (i = 0; i < sortHeads.length; ++i) {
+        sortHeads[i].setAttribute("onClick", "sortTable(" + i + "); toggleSortClass(" + i + ")");
+        sortHeads[i].setAttribute("class", "sortArrows");
+        sortHeads[0].setAttribute("class", "dnSortArrow");
 
+    }
+
+    function toggleSortClass(col) {
+        for (i = 0; i < sortHeads.length; ++i) {
+            if (sortHeads[col].className == "dnSortArrow") {
+                sortHeads[i].className = "sortArrows";
+                sortHeads[col].className = "upSortArrow";
+            } else {
+                sortHeads[i].className = "sortArrows";
+                sortHeads[col].className = "dnSortArrow"
+            }
+        }
+    }
+
+    function sortTable(n) {
+        var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+        table = document.getElementsByClassName("sortableTable")[0];
+        switching = true; // Set the sorting direction to ascending:
+        dir = "asc";
+        while (switching) {
+            switching = false;
+            rows = table.getElementsByTagName("TR");
+            for (i = 1; i < (rows.length - 1); i++) {
+                shouldSwitch = false;
+                x = rows[i].getElementsByTagName("TD")[n];
+                y = rows[i + 1].getElementsByTagName("TD")[n];
+                if (dir == "asc") {
+                    if (x.textContent.toLowerCase() > y.textContent.toLowerCase()) {
+                        shouldSwitch = true;
+                        break;
+                    }
+                } else if (dir == "desc") {
+                    if (x.textContent.toLowerCase() < y.textContent.toLowerCase()) {
+                        shouldSwitch = true;
+                        break;
+                    }
+                }
+            }
+            if (shouldSwitch) {
+                rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                switching = true;
+                switchcount++;
+            } else {
+                if (switchcount == 0 && dir == "asc") {
+                    dir = "desc";
+                    switching = true;
+                }
+            }
+        }
+    }
+    sortTable(0);
+}
 // JavaScript Document
