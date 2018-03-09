@@ -142,9 +142,9 @@ section.resume-section .resume-item .resume-date {
 }
 
 @media (min-width: 768px) {
-    /*section.resume-section {
+    section.resume-section {
         min-height: 100vh;
-    }*/
+    }
     section.resume-section .resume-item .resume-date {
         min-width: 18rem;
     }
@@ -405,7 +405,7 @@ th.sortArrows:after {
     /*position: fixed;*/
     position: absolute;
     /*top: 110px;*/
-    top: 1500px;
+    top: 1900px;
     right: 0;
     /*width: 52px;*/
     width: 40px;
