@@ -18,6 +18,7 @@ function showTooltip(el) {
     setTimeout(
         function() {
             hideTooltip(el);
+            el.innerText - setTimeout();
         }, 3000);
 }
 
@@ -27,6 +28,7 @@ function hideTooltip(el) {
 }
 
 function mouseMove() {
+
     var tip = document.querySelectorAll('.tooltip');
 
     function mouseX(evt) {
