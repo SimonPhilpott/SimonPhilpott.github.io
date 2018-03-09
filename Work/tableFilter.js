@@ -154,7 +154,7 @@ function contentFilter(filterID, filterType) {
     var showHideFilterBtn = document.createElement('button');
     var appliedFilter = document.createElement('div');
     appliedFilter.setAttribute("id", "appliedFilterList");
-    showHideFilterBtn.setAttribute("class", "btn btn-default showHide");
+    showHideFilterBtn.setAttribute("class", "btn btn-primary btn-lg showHide");
     showHideFilterBtn.setAttribute("title", "show/hide the table filter options");
     showHideFilterBtn.setAttribute("type", "button");
     showHideFilterBtn.setAttribute("id", "hideShowTableFilters");
