@@ -18,7 +18,6 @@ function showTooltip(el) {
     setTimeout(
         function() {
             hideTooltip(el);
-            el.innerText - setTimeout();
         }, 3000);
 }
 
