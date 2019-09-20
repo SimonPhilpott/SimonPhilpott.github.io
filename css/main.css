@@ -833,7 +833,7 @@ h1.banner__heading,
     }
     .table th,
     .table td {
-    padding: 0.25rem;
+    padding: 0rem;
     }
 }
 
@@ -905,7 +905,7 @@ h1.banner__heading,
     }
     .table th,
     .table td {
-    padding: 0.5rem;
+    padding: 0rem;
     }
 }
 
@@ -1037,7 +1037,7 @@ svg {
 
 .table th,
 .table td {
-    padding: 0.75rem;
+    padding: 0rem;
     vertical-align: top;
     border-top: 1px solid #dee2e6;
 }
