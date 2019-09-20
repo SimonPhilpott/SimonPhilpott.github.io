@@ -314,7 +314,7 @@ div.menu__close i::before {
 }
 
 .section__header__background {
-    padding: 0rem 2rem;
+    padding: 1rem 2rem 0rem 2rem;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
