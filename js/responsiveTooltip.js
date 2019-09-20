@@ -18,7 +18,7 @@ function showTooltip(el) {
     setTimeout(
         function() {
             hideTooltip(el);
-        }, 3000);
+        }, 5000);
 }
 
 function hideTooltip(el) {
@@ -49,7 +49,7 @@ function mouseMove() {
         var offX = -Math.abs(tipWidth / 2); /*Half the total popup width as an offset from the mouse cursor to hover in the centre*/
         var offY = -Math.abs(tipHeight) - 25; /*The total popup height + 25px as an offset from the mouse cursor to hover above the cursor*/
         var stopOffscreenLeft = Math.abs(offX); /* The popup width (halved) as a positive figure to use to stop the popup going offscreen to the left*/
-        var stopOffscreenTop = Math.abs(offY); /* The popup high (plus Y offset) as a positive figure to use to stop the popup going offscreen to the top*/
+        var stopOffscreenTop = Math.abs(offY); /* The popup hight (plus Y offset) as a positive figure to use to stop the popup going offscreen to the top*/
         var mousePosX = evt.clientX; /* The mouse cursor Position on the X*/
         evt = evt || window.event;
         for (var i = 0; i < tip.length; ++i) {
@@ -63,7 +63,8 @@ function mouseMove() {
                 tooltipList.style.left = (viewportwidth + (offX * 2) + scrollRight - 25) + 'px';
             }
             if (evt.clientY <= stopOffscreenTop) { /*Stop the popup going off the top of the screen by switching it to beneath the cursor*/
-                tooltipList.style.top = (parseInt(mouseY(evt)) + 20) + 'px';
+                //tooltipList.style.top = (parseInt(mouseY(evt)) + 20) + 'px';
+                tooltipList.style.top = 200 + "px";
             }
             tooltipList.style.width = viewportwidth - 100 + "px"; /*Resize the tooltip width if the browser widow is narrow*/
         }
