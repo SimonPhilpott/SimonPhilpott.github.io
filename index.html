@@ -1,282 +1,464 @@
-<!DOCTYPE html>
-<html lang="en">
-<!-- CMD, git add -A, git commit -am "Initial Commit", git push origin master-->
+<!doctype html>
+<html class="no-js" lang="">
 
 <head>
-
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Resume - Simon Philpott</title>
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom fonts for this template -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Simon Philpott Portfolio</title>
+    <meta name="description" content="Simon Philpott Portfolio Design Front End Development Freelance HTML HTML5 CSS2 CSS3 Javascript ES5 ES6 PHP Git">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!--Modernizer-->
+    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <meta name="theme-color" content="#fafafa">
+    <!--Heading fonts-->
     <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href="vendor/devicons/css/devicons.min.css" rel="stylesheet">
-    <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
-
-    <!--<link href="css/resume.min.css" rel="stylesheet"> Removed while in dev-->
-    <link href="css/resume.css" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css?family=Italianno|Mr+De+Haviland:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <!--Font awesome https://fontawesome.com v5.8 -->
+    <script src="https://kit.fontawesome.com/e0d4628e85.js"></script>
+    <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
 
-<body id="page-top">
-
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">
-            <span class="d-none d-lg-block">
-          <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpg" alt="">
-        </span>
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="index.html#about">About</a>
+<body>
+    <div class="wrapper">
+        <nav class="nav">
+            <div class="menu__vine"></div>
+            <div class="menu__arrow"></div>
+            <ul class="nav__menu">
+                <li class="nav__item">
+                    <a href="index.html#about" data-position="4.8rem" data-identity="about" data-item="0" data-state="false">About</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="index.html#experience">Experience</a>
+                <li class="nav__item">
+                    <a href="index.html#experience" data-position="7.3rem" data-identity="experience" data-item="1" data-state="false">Experience</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="index.html#education">Education</a>
+                <li class="nav__item">
+                    <a href="index.html#education" data-position="9.8rem" data-identity="education" data-item="2" data-state="false">Education</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="index.html#skills">Skills</a>
+                <li class="nav__item">
+                    <a href="index.html#skills" data-position="12.3rem" data-identity="skills" data-item="3" data-state="false">Skills</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="index.html#interests">Interests</a>
+                <li class="nav__item">
+                    <a href="index.html#interests" data-position="14.8rem" data-identity="interests" data-item="4" data-state="false">Interests</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="work.html">Work</a>
+                <li class="nav__item">
+                    <a href="index.html#projects" data-position="17.3rem" data-identity="projects" data-item="5" data-state="false">Projects</a>
                 </li>
-                <!--<li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#awards">Awards</a>
-                </li>-->
+                <li class="nav__item">
+                    <a href="index.html#lab" data-position="19.8rem" data-identity="lab" data-item="6" data-state="false">Lab</a>
+                </li>
             </ul>
-        </div>
-    </nav>
-
-    <div class="container-fluid p-0">
-
-        <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
-            <div class="my-auto">
-                <h1 class="mb-0">Simon
-                    <span class="text-primary">Philpott</span>
-                </h1>
-                <div class="subheading mb-5">Leeds · West Yorkshire
-                    <a href="mailto:name@email.com">sideburnt@gmail.com</a>
-                </div>
-                <p class="mb-5">I am experienced in front end development and creating bespoke business solutions. I have a strong background in knowledge, data and information management</p>
-                <ul class="list-inline list-social-icons mb-0">
-                    <li class="list-inline-item">
-                        <a href="https://www.facebook.com/simon.philpott?ref=bookmarks">
-                            <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                </span>
-                        </a>
-                    </li>
-                    <!--<li class="list-inline-item">
-              <a href="#">
-                <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </li>-->
-                    <li class="list-inline-item">
-                        <a href="https://github.com/SimonPhilpott/SimonPhilpott.github.io">
-                            <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                </span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="experience">
-            <div class="my-auto">
-                <li class="list-inline-item">
-                    <h2 class="mb-5">Experience</h2>
-                </li>
-                <div class="resume-item d-flex flex-column flex-md-row mb-5">
-                    <div class="resume-content mr-auto">
-                        <h3 class="mb-0">Senior Intranet Consultant</h3>
-                        <div class="subheading mb-3">Turner &amp; Townsend</div>
-                        <p>Working with global teams to capture, collate and evaluate knowledge and best practice. Tracking success through analytics and feeding lessons learned into team practice. Maintaining, upgrading and building the business intranet
-                            on a Lotus Notes platform to ensure it is accessible to staff through all environments and technology.</p>
+            <div class="menu__close"><i class="fas fa-angle-up"></i></div>
+        </nav>
+        <main class="main">
+            <article class="section" id="about" data-section>
+                <header class="section__header contact__details">
+                    <h1>Simon <span class="alt">Philpott</span></h1>
+                    <h4>Leeds · West Yorkshire ·&nbsp;</h4>
+                    <h4><a href="mailto:philpottwork@gmail.com" title="Drop me an email">Get in touch</a> ·&nbsp;</h4>
+                    <div class="social-media">
+                        <a href="https://www.facebook.com/simon.philpott?ref=bookmarks" title="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/burrpott/?hl=en" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://github.com/SimonPhilpott/SimonPhilpott.github.io" title="Github"><i class="fab fa-github"></i></a>
+                        <a href="#" title="CV"><i class="far fa-file"><span>CV</span></i></a>
                     </div>
-                    <div class="resume-date text-md-right">
-                        <span class="text-primary">August 2007 - Present</span>
+                </header>
+                <div class="section__content">
+                    <p>Hi, I am a coder and designer with a knack for problem solving and rising to challenges. This site is a bit of a snapshot of where I'm at with my professional / personal development projects and experience</p>
+                    <p>Why have a site name?, there is a simplicity in the trees and rocks that is meaningful to the way I approach design and development. Usability is about immersion, the best routes and experiences aren't always about knowing where you're
+                        going but getting to where you want to be.
+                    </p>
+                </div>
+                <div class="animated_homepage">
+                    <div class="homepage__heading">
+                        <h1 class="banner__heading no__margin">Wood:<span class="alt">land</span></h1>
+                        <h3 class="banner__heading alt__two">Not all those who wander are lost</h3>
                     </div>
                 </div>
-
-                <div class="resume-item d-flex flex-column flex-md-row mb-5">
-                    <div class="resume-content mr-auto">
-                        <h3 class="mb-0">Graphic Designer / Intranet Leader</h3>
-                        <div class="subheading mb-3">General Electric</div>
-                        <p>Designing and building intranet web sites. Working alongside departmental project launches producing posters, desk drop marketing, presentations and displays. Maintaining and intranet Leader position for best practice sharing throughout
-                            Europe, Intranet development and upgrades.
+            </article>
+            <article class="section" id="experience" data-section>
+                <header class="section__header__background" style="background-image: url('img/experience.jpg?sharp=10&vib=20&w=2000');">
+                    <h1 class="banner__heading">Experience</h1>
+                </header>
+                <section class="content__grid">
+                    <div class="content__grid__item span__column">
+                        <header>
+                            <h3>Senior Intranet Consultant</h3>
+                            <h5 class="alt">Turner &amp; Townsend</h5>
+                            <div class="date">
+                                <h5>August 2007 - Present</h5>
+                            </div>
+                        </header>
+                        <p>Working with global teams to capture, collate and evaluate knowledge and best practice. Tracking success through analytics and feeding lessons learned into team practice.</p>
+                        <p>Upgrading, building and branding the business intranet to ensure it is accessible for staff through all environments and technology using current design practices, team resource management and mentoring.</p>
+                    </div>
+                    <div class="content__grid__item">
+                        <header>
+                            <h5>Graphic Designer / Intranet Leader</h5>
+                            <h6 class="alt">General Electric</h6>
+                            <div class="date">
+                                <h6>March 2004 – August 2007</h6>
+                            </div>
+                        </header>
+                        <p>Designing and building intranet web sites. Working alongside departmental project launches producing posters, desk drop marketing, presentations and displays. Maintaining an intranet Leader position for best practice sharing throughout
+                            Europe. Intranet platform development and management.</p>
+                    </div>
+                    <div class="content__grid__item">
+                        <header>
+                            <h5>IT Engineer</h5>
+                            <h6 class="alt">ComputaCenter</h6>
+                            <div class="date">
+                                <h6>August 2003 – March 2004</h6>
+                            </div>
+                        </header>
+                        <p>Various contract positions delivering IT support, project management, installation/support of business software and hardware.</p>
+                    </div>
+                    <div class="content__grid__item">
+                        <header>
+                            <h5>IT Deployment team leader / Project manager</h5>
+                            <h6 class="alt">EDS</h6>
+                            <div class="date">
+                                <h6>November 2002 – June 2003</h6>
+                            </div>
+                        </header>
+                        <p>IT hardware and software deployment for General Motors across multiple sites. Team leadership and project management responsibilities to ensure delivery was achieved ahead of time and under budget.</p>
+                    </div>
+                </section>
+            </article>
+            <article class="section" id="education" data-section>
+                <header class="section__header__background" style="background-image: url('img/education.jpg?sharp=10&vib=20&w=2000');">
+                    <h1 class="banner__heading">Education</h1>
+                </header>
+                <section class="content__grid ">
+                    <div class="content__grid__item span__column">
+                        <header>
+                            <h3>University of Bedfordshire</h3>
+                            <h5 class="alt">BA HONS - Graphic design</h5>
+                            <div class="date">
+                                <h5>September 1997 - June 2000</h5>
+                            </div>
+                        </header>
+                    </div>
+                    <div class="content__grid__item">
+                        <header>
+                            <h5>Peterborough College, Cambridgeshire</h5>
+                            <h6 class="alt">BTECH National Diploma - Art &amp; Design</h6>
+                            <div class="date">
+                                <h6>September 1996 - June 1997</h6>
+                            </div>
+                        </header>
+                    </div>
+                    <div class="content__grid__item">
+                        <header>
+                            <h5>Ramsey Abbey College, Cambridgeshire</h5>
+                            <h6 class="alt">
+                                <ul>
+                                    <li>A-Level Art</li>
+                                    <li>A-Level Design &amp; Technology</li>
+                                    <li>8 GCSE Passes C+</li>
+                                </ul>
+                            </h6>
+                            <div class="date">
+                                <h6>1991 - 1996</h6>
+                            </div>
+                        </header>
+                    </div>
+                </section>
+            </article>
+            <article class="section" id="skills" data-section>
+                <header class="section__header__background" style="background-image: url('img/skills.jpg?sharp=10&vib=20&w=2000');">
+                    <h1 class="banner__heading">Skills</h1>
+                </header>
+                <section class="content__grid">
+                    <div class="content__grid__item">
+                        <header>
+                            <h3>Programming Languages &amp; Tools</h3>
+                        </header>
+                        <ul class="alt icon-list">
+                            <li><i class="fab fa-html5" title="HTML 4 / 5"></i>
+                                <h6 class="alt">HTML 5</h6>
+                            </li>
+                            <li><i class="fab fa-css3-alt" title="CSS / CSS3"></i>
+                                <h6 class="alt">CSS3: <span class="sub__class">Flexbox, Grid, Transitions, Transforms</span></h6>
+                            </li>
+                            <li><i class="fab fa-js-square" title="Javascript ES3-6"></i>
+                                <h6 class="alt">Javascript: <span class="sub__class">ES5, ES6, GSAP</span></h6>
+                            </li>
+                            <li><i class="fab fa-bootstrap" title="Bootstrap 2-4"></i>
+                                <h6 class="alt">Frameworks: <span class="sub__class">Bootstrap 4, Skel, Pure CSS</span></h6>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="content__grid__item">
+                        <header>
+                            <h3>Workflow</h3>
+                        </header>
+                        <ul class="alt icon-list">
+                            <li>
+                                <i class="fas fa-check-square"></i>
+                                <h6 class="alt">Cross Functional Teams</h6>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-square"></i>
+                                <h6 class="alt">Sprint UX Development</h6>
+                            </li>
+                            <li>
+                                <i class="fab fa-git-square"></i>
+                                <h6 class="alt">Git</h6>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-square"></i>
+                                <h6 class="alt">Agile</h6>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="content__grid__item">
+                        <header>
+                            <h3>Standards</h3>
+                        </header>
+                        <ul class="alt icon-list">
+                            <li>
+                                <i class="fas fa-check-square"></i>
+                                <h6 class="alt">Responsive Design: <span class="sub__class">Mobile first</span></h6>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-square"></i>
+                                <h6 class="alt">Cross Browser Testing &amp; Debugging</h6>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-square"></i>
+                                <h6 class="alt">WAI-ARIA</h6>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="content__grid__item">
+                        <header>
+                            <h3>What I'm learning</h3>
+                        </header>
+                        <ul class="alt icon-list">
+                            <li>
+                                <i class="fas fa-check-square"></i>
+                                <h6 class="alt">C++</h6>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-square"></i>
+                                <h6 class="alt">C#</h6>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-square"></i>
+                                <h6 class="alt">Java</h6>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-square"></i>
+                                <h6 class="alt">Node.JS</h6>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-square"></i>
+                                <h6 class="alt">REST API</h6>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-square"></i>
+                                <h6 class="alt">MongoDB</h6>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-square"></i>
+                                <h6 class="alt">Python</h6>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </article>
+            <article class="section" id="interests" data-section>
+                <header class="section__header__background" style="background-image: url('img/interests.jpg?sharp=10&vib=20&w=2000');">
+                    <h1 class="banner__heading">Interests</h1>
+                </header>
+                <section class="content__grid ">
+                    <div class="content__grid__item span__column">
+                        <p>I enjoy my time being outdoors and wild camping as much as I can. I just love being out in the woods, like way out there, and seeing beautiful places in nature. I can’t imagine life without that.</p>
+                        <div class="social-media">
+                            <a href="https://www.instagram.com/burrpott/?hl=en" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        </div>
+                        <div id="instafeed"></div>
+                    </div>
+                </section>
+            </article>
+            <article class="section" id="projects" data-section>
+                <header class="section__header__background" style="background-image: url('img/work.jpg?sharp=10&vib=20&w=2000');">
+                    <h1 class="banner__heading">Projects</h1>
+                </header>
+                <section class="content__grid ">
+                    <div class="content__grid__item">
+                        <h3 id="filterableTable">Filterable, sortable tables</h3>
+                        <p>This projects goal was to extend the user interaction for data tables on a legacy content management system, with very minimal administration required. Requirements were to allow staff to quickly find (in the case of business use)
+                            documents contained within a table and apply filters to the table based on a series of meta data fields. Specification stated the use of vanilla ES5 Javascript with no reliance on libraries and with all environmental requirements
+                            like the checkboxes to be dynamic</p>
+                        <p>Extension to this functionality later included sortable columns, specific special character/keyword handling, URL pre-filtering on page loading and the requirement to port this functionality over to a future platform
                         </p>
+                        <hr/>
+                        <div id="filter">
+                            <div class="filter-wrap">
+                                <table class="table table-dark sortableTable">
+                                    <thead>
+                                        <tr>
+                                            <th>First Name</th>
+                                            <th>Last Name</th>
+                                            <th>Skills</th>
+                                            <th>Location</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>John</td>
+                                            <td>Doe</td>
+                                            <td>Hula hooping</td>
+                                            <td>Scotland</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sue</td>
+                                            <td>Doe</td>
+                                            <td>Juggling / Karate</td>
+                                            <td>Scotland</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Mary</td>
+                                            <td>Moe</td>
+                                            <td>Juggling / Frisbee</td>
+                                            <td>Australia</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Julie</td>
+                                            <td>Dooley</td>
+                                            <td>Singing</td>
+                                            <td>America</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
-                    <div class="resume-date text-md-right">
-                        <span class="text-primary">March 2004 – August 2007</span>
+                    <div class="content__grid__item">
+                        <h3 id="tooltips">Responsive tooltips</h3>
+                        <p>As part of an upgrade to a business service delivery model an extension to the standard HTML tooltips were required. Tooltips needed to remain responsive to client viewing widths and to contain more content than just standard text.
+                            Specification stated the use of vanilla Javascript with no reliance on libraries.
+                        </p>
+                        <p>Later requirements also included a timed fade out and support for different content page placing and on the fly client window resizing.
+                        </p>
+                        <hr/>
+                        <button type="button" class="btn" onmouseover="showTooltip('tooltip');" onmouseout="hideTooltip('tooltip');">Hover over me</button>
+                        <div id="tooltip" class="tooltip shadow" style="display:block"><img src="" />
+                            <h3>Tooltip heading</h3><span id="time"></span>
+                            <p>We worked closely with the Head of Procurement, the Commercial Director and other key stakeholders to Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+                        </div>
                     </div>
-                </div>
 
-                <div class="resume-item d-flex flex-column flex-md-row mb-5">
-                    <div class="resume-content mr-auto">
-                        <h3 class="mb-0">IT Engineer</h3>
-                        <div class="subheading mb-3">ComputaCenter</div>
-                        <p>Various contract positions delivering IT support, project management, installation/support of business software and hardware. </p>
+                </section>
+            </article>
+            <article class="section" id="lab" data-section>
+                <header class="section__header__background" style="background-image: url('img/lab.jpg?sharp=10&vib=20&w=2000');">
+                    <h1 class="banner__heading">Lab</h1>
+                </header>
+                <section class="content__grid ">
+                    <div class="content__grid__item span__column">
+                        <p>Recently I have been heavily involved in the open source artificial pancreas development which aims to blend a number of hardware and open source software projects to replace the manual maintenance and tracking of diabetes management.
+                            This has allowed me to become more involved in Git, Java to support the hardware and software that pushes data into MongoDB. This make the data cloud accessible for healthcare professionals while opening the data up for API
+                            and extended uses.</p>
+                        <div class="call__outs">
+                            <div class="call__out one">
+                                <div class="link">
+                                    <h6 class="alt">Freestyle Libre</h6>
+                                    <h6 class="note">Hardware glucose monitor</h6>
+                                </div>
+                            </div>
+                            <div class="call__out two">
+                                <div class="link">
+                                    <h6 class="alt">MiaoMiao</h6>
+                                    <h6 class="note">Hardware monitor reader</h6>
+                                </div>
+                            </div>
+                            <div class="call__out three">
+                                <div class="link">
+                                    <h6 class="alt">Sony smartwatch 3</h6>
+                                    <h6 class="note">Android smartwatch data collector</h6>
+                                </div>
+                            </div>
+                            <div class="call__out four">
+                                <div class="link">
+                                    <h6 class="alt"><a href="https://github.com/NightscoutFoundation/xDrip" target="_blank">Android Xdrip+</a></h6>
+                                    <h6 class="note">Android data management software</h6>
+                                </div>
+                            </div>
+                            <div class="call__out five">
+                                <div class="link">
+                                    <h6 class="alt"><a href="https://simon-philpott-nightscout.herokuapp.com/" target="_blank">Personal cloud data</a></h6>
+                                    <h6 class="note">Reporting, API</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <p>My goal is to move towards a fully automated artificial pancreas system. In the meantime I can do some neat things like live reporting on my blood sugar level and adding some code to suggest a course of action. </p>
+                        <div class="call__outs alt">
+                            <div class="call__out one">
+                                <div class="link">
+                                    <h6 class="alt"><a href="https://github.com/winemug/OmniCore" target="_blank">Android Omnicore</a></h6>
+                                    <h6 class="note">Closed loop artificial pancreas software</h6>
+                                </div>
+                            </div>
+                            <div class="call__out two">
+                                <div class="link">
+                                    <h6 class="alt"><a href="https://getrileylink.org/" target="_blank">RileyLink</a></h6>
+                                    <h6 class="note">Hardware communication to the insulin pump</h6>
+                                </div>
+                            </div>
+                            <div class="call__out three">
+                                <div class="link">
+                                    <h6 class="alt">Omnipod</h6>
+                                    <h6 class="note">Insulin pump</h6>
+                                </div>
+                            </div>
+                            <div id="person">
+                                <i id="man" class="fas fa-male"></i>
+                                <h2 class="alt" id="bg"></h2>
+                                <h5 class="note" id="summary"></h5>
+                            </div>
+                        </div>
                     </div>
-                    <div class="resume-date text-md-right">
-                        <span class="text-primary">August 2003 – March 2004</span>
-                    </div>
-                </div>
-
-                <div class="resume-item d-flex flex-column flex-md-row">
-                    <div class="resume-content mr-auto">
-                        <h3 class="mb-0">IT Deployment team leader / Project manager</h3>
-                        <div class="subheading mb-3">EDS</div>
-                        <p>IT hardware and software deployment for General Motors across multiple sites. Team leadership and project management responsibilities to ensure delivery was achieved ahead of time and under budget. </p>
-                    </div>
-                    <div class="resume-date text-md-right">
-                        <span class="text-primary">November 2002 – June 2003</span>
-                    </div>
-                </div>
-
-            </div>
-
-        </section>
-
-        <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="education">
-            <div class="my-auto">
-                <h2 class="mb-5">Education</h2>
-
-                <div class="resume-item d-flex flex-column flex-md-row mb-5">
-                    <div class="resume-content mr-auto">
-                        <h3 class="mb-0">University of Bedfordshire</h3>
-                        <div class="subheading mb-3">BA HONS - Graphic design</div>
-                    </div>
-                    <div class="resume-date text-md-right">
-                        <span class="text-primary">September 1997 - June 2000</span>
-                    </div>
-                </div>
-                <div class="resume-item d-flex flex-column flex-md-row">
-                    <div class="resume-content mr-auto">
-                        <h3 class="mb-0">Peterborough College, Cambridgeshire</h3>
-                        <div class="subheading mb-3">BTECH National Diploma - Art &amp; Design</div>
-                    </div>
-                    <div class="resume-date text-md-right">
-                        <span class="text-primary">September 1996 - June 1997</span>
-                    </div>
-                </div>
-                <div class="resume-item d-flex flex-column flex-md-row">
-                    <div class="resume-content mr-auto">
-                        <h3 class="mb-0">Ramsey Abbey College, Cambridgeshire</h3>
-                        <div class="subheading mb-3">A-Level Art</div>
-                        <div class="subheading mb-3">A-Level Design &amp; Technology</div>
-                        <div class="subheading mb-3">8 GCSE Passes C+</div>
-                    </div>
-                    <div class="resume-date text-md-right">
-                        <span class="text-primary">1991 - 1996</span>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills">
-            <div class="my-auto">
-                <h2 class="mb-5">Skills</h2>
-
-                <div class="subheading mb-3">Programming Languages &amp; Tools</div>
-                <ul class="list-inline list-icons">
-                    <li class="list-inline-item">
-                        <i class="devicons devicons-html5" title="HTML 4 / 5"></i>
-                    </li>
-                    <li class="list-inline-item">
-                        <i class="devicons devicons-css3" title="CSS / CSS3"></i>
-                    </li>
-                    <li class="list-inline-item">
-                        <i class="devicons devicons-javascript" title="Javascript ES3-5"></i>
-                    </li>
-                    <li class="list-inline-item">
-                        <i class="devicons devicons-bootstrap" title="Bootstrap 2-4"></i>
-                    </li>
-                </ul>
-
-                <div class="subheading mb-3">Workflow</div>
-                <ul class="fa-ul mb-0">
-                    <li>
-                        <i class="fa-li fa fa-check"></i> Responsive Design</li>
-                    <li>
-                        <i class="fa-li fa fa-check"></i> Cross Browser Testing &amp; Debugging</li>
-                    <li>
-                        <i class="fa-li fa fa-check"></i> Cross Functional Teams</li>
-                    <li>
-                        <i class="fa-li fa fa-check"></i> Sprint UX Development</li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="interests">
-            <div class="my-auto">
-                <h2 class="mb-5">Interests</h2>
-                <p>Apart from being a web developer, I enjoy most of my time being outdoors. I am an avid wild camper and archer. During the warmer months I enjoy mountain biking, hiking and trying my hand at carving.</p>
-                <p class="mb-0">When forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows, I am an aspiring 'best dad in the world' champion, and I spend a large amount of my free time keeping up with technolgy advancements in the
-                    front-end web development world.
-                </p>
-            </div>
-        </section>
-
-        <!--<section class="resume-section p-3 p-lg-5 d-flex flex-column" id="awards">
-            <div class="my-auto">
-                <h2 class="mb-5">Awards &amp; Certifications</h2>
-                <ul class="fa-ul mb-0">
-                    <li>
-                        <i class="fa-li fa fa-trophy text-warning"></i> Google Analytics Certified Developer</li>
-                    <li>
-                        <i class="fa-li fa fa-trophy text-warning"></i> Mobile Web Specialist - Google Certification</li>
-                    <li>
-                        <i class="fa-li fa fa-trophy text-warning"></i> 1
-                        <sup>st</sup> Place - University of Colorado Boulder - Emerging Tech Competition 2009</li>
-                    <li>
-                        <i class="fa-li fa fa-trophy text-warning"></i> 1
-                        <sup>st</sup> Place - University of Colorado Boulder - Adobe Creative Jam 2008 (UI Design Category)</li>
-                    <li>
-                        <i class="fa-li fa fa-trophy text-warning"></i> 2
-                        <sup>nd</sup> Place - University of Colorado Boulder - Emerging Tech Competition 2008</li>
-                    <li>
-                        <li>
-                            <i class="fa-li fa fa-trophy text-warning"></i> 1
-                            <sup>st</sup> Place - James Buchanan High School - Hackathon 2006</li>
-                        <li>
-                            <i class="fa-li fa fa-trophy text-warning"></i> 3
-                            <sup>rd</sup> Place - James Buchanan High School - Hackathon 2005</li>
-                </ul>
-            </div>
-        </section>-->
-
+                </section>
+            </article>
+        </main>
     </div>
-
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-    <script src="js/resume.min.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="js/main.js"></script>
+    <!--Animated homepage-->
+    <script src="js/homepage.js"></script>
+    <!--Navigation-->
+    <script src="js/navigation.js"></script>
+    <!--Table filter-->
+    <script src="js/tableFilter.js"></script>
+    <script>
+        contentFilter('#filter', 'inclusive');
+    </script>
+    <!--Responsive tooltip-->
+    <script src="js/responsiveTooltip.js"></script>
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <!--<script>
+        (function(b, o, i, l, e, r) {
+            b.GoogleAnalyticsObject = l;
+            b[l] || (b[l] =
+                function() {
+                    (b[l].q = b[l].q || []).push(arguments)
+                });
+            b[l].l = +new Date;
+            e = o.createElement(i);
+            r = o.getElementsByTagName(i)[0];
+            e.src = '//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e, r)
+        }(window, document, 'script', 'ga'));
+        ga('create', 'UA-XXXXX-X', 'auto');
+        ga('send', 'pageview');
+    </script>-->
 </body>
 
 </html>
