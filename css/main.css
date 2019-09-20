@@ -831,6 +831,10 @@ h1.banner__heading,
         display: block;
         top: 2rem;
     }
+    .table th,
+    .table td {
+    padding: 0.25rem;
+    }
 }
 
 
