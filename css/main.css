@@ -892,7 +892,7 @@ h1.banner__heading,
         padding: 2rem 0;
     }
     .section__header__background {
-        padding: 2rem;
+        padding: 2rem 2rem 3rem 2rem;
     }
     .section__header {
         text-align: left;
