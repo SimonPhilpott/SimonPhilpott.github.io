@@ -1042,6 +1042,7 @@ svg {
 .table td {
     padding: 0rem;
     vertical-align: top;
+    text-align:left;
     border-top: 1px solid #dee2e6;
 }
 
@@ -1060,10 +1061,6 @@ svg {
 
 
 /*Filterable table*/
-
-#filter table {
-    width: auto;
-}
 
 #filter .showHide {
     /*width: 300px;*/
