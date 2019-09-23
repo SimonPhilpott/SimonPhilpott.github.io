@@ -1049,6 +1049,7 @@ svg {
 .table thead th {
     vertical-align: bottom;
     border-bottom: 2px solid #dee2e6;
+    position:relative;
 }
 
 .table tbody+tbody {
@@ -1228,14 +1229,15 @@ svg {
 th.sortArrows,
 th.dnSortArrow,
 th.upSortArrow {
-    padding-right: 30px;
+    padding-right: 40px;
 }
 
 th.sortArrows:after,
 th.dnSortArrow:after,
 th.upSortArrow:after {
     float: right;
-    margin-right: -20px
+    position:absolute;
+    right:10px;
 }
 
 th.dnSortArrow:after {
