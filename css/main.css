@@ -834,7 +834,6 @@ h1.banner__heading,
     .table th,
     .table td {
     padding: 0rem;
-    font-size:50%;
     }
 }
 
@@ -1045,7 +1044,6 @@ svg {
     padding: 0rem;
     vertical-align: top;
     border-top: 1px solid #dee2e6;
-    font-size:50%;
 }
 
 .table thead th {
@@ -1241,7 +1239,7 @@ th.sortArrows:after,
 th.dnSortArrow:after,
 th.upSortArrow:after {
     float: right;
-    margin-right: -40px
+    margin-right: -20px
 }
 
 th.dnSortArrow:after {
