@@ -1041,7 +1041,7 @@ svg {
 
 .table th,
 .table td {
-    padding: 0rem;
+    padding: 0.75rem;
     vertical-align: top;
     text-align:left;
     border-top: 1px solid #32383e;
@@ -1218,7 +1218,9 @@ svg {
 
 
 /*Sortable table columns*/
-
+#sortableTable th, .sortableTable th {
+ transition: background-color .25s ease-in-out;   
+}    
 #sortableTable th:hover,
 .sortableTable th:hover {
     cursor: pointer;
