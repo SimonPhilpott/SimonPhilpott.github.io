@@ -302,9 +302,9 @@
                         <h3 id="keywordMatching">Dynamic Keyword Links</h3>
                         <p>Description pending</p>
                         <hr/>
-                    <div id="targetKeymatch"><p>
-    This is a test piece of text that contains the keywords in my array like Photos, C.V., CV, Google, Github, Portfolio, Instagram, email and Simon Philpott, ignoring the keywords if they're in
-                        <h5>Portfolio headings</h5> or if they are existing <a href="#">Simon Philpott links</a>.</p>
+                    <div id="targetKeymatch">
+                        <p>This is a test piece of text that contains the keywords in my array like Photos, C.V., CV, Google, Github, Portfolio, Instagram, email and Simon Philpott, ignoring the keywords if they're in
+                        <h6>Portfolio headings</h6> or if they are existing <a href="#">Simon Philpott links</a>.</p>
                         </div>
                     </div>                    
                     <div class="content__grid__item span__column">
@@ -461,7 +461,7 @@
     <!--Keyword match-->
     <script src="js/keywordMatch.js"></script>
     <script>
-        keywordText('#targetKeymatch', 'gm', '(?!\<\/a>)(?!\<\/h>)')
+        keywordText('#targetKeymatch', 'gm', '(?!\<\/a>)(?!\<\/h)')
     </script>
     <!--Responsive tooltip-->
     <script src="js/responsiveTooltip.js"></script>
