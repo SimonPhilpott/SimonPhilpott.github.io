@@ -1,0 +1,26 @@
+[{
+    "title": "Google",
+    "terms": "",
+    "url": "http://www.google.co.uk",
+    "link": "web"
+}, {
+    "title": "Github",
+    "terms": "Portfolio",
+    "url": "https://simonphilpott.github.io/index.html",
+    "link": "web"
+}, {
+    "title": "Simon Philpott",
+    "terms": "email",
+    "url": "mailto:simonphilpottwork@gmail.com",
+    "link": "email"
+}, {
+    "title": "Instagram",
+    "terms": "Photos",
+    "url": "https://www.instagram.com/burrpott/?hl=en",
+    "link": "web"
+}, {
+    "title": "CV",
+    "terms": "C.V.",
+    "url": "https://simonphilpott.github.io/CV%20-%20Simon%20Philpott%20-%202019.docx",
+    "link": "web"
+}]
