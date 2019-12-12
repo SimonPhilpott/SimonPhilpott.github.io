@@ -1,6 +1,7 @@
 async function keywordText(targetText, scope, RegExpression) {
     try {
-        const result = await fetch('https://cors-anywhere.herokuapp.com/https://simonphilpott.github.io/js/keywordMatchesPortfolio.json', {
+        // ttps://cors-anywhere.herokuapp.com/https://simonphilpott.github.io/js/keywordMatchesPortfolio.json
+        const result = await fetch('keywordMatchesPortfolio.json', {
             method: 'GET',
             headers: {
                 'Access-Control-Allow-Origin': '*'
