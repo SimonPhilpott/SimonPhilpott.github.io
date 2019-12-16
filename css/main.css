@@ -152,7 +152,7 @@ p+p {
 
 .nav {
     background-color: #AFBD38;
-    width: 100vw;
+    width: 100%;
     overflow: hidden;
     height: auto;
 }
