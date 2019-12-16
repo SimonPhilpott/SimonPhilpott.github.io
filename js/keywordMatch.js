@@ -21,7 +21,6 @@
                 matchList.forEach(function(entry) {
                     // If the title or tag match (Exactly), but aren't already anchor links/buttons or headings. Can be expanded via Regexp
                     let expression = entry + RegExpression;
-                    console.log(expression)
                         // 'm' multiline , 'g' global etc.
                     let rx = new RegExp(expression, scope);
                     let result = document.querySelector(targetText).innerHTML.match(rx);
