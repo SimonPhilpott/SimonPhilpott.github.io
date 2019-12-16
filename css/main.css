@@ -284,12 +284,13 @@ div.menu__vine i {
 
 div.menu__close {
     position: absolute;
-    right: 2rem;
+    right: 0rem; /*was 2rem*/    
     bottom: 2rem;
 }
 
 div.menu__close i::before {
     font-size: 2.5rem;
+    padding:0 2rem; /*was 0*/
 }
 
 .section {
