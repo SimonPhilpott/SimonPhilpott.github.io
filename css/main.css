@@ -1267,7 +1267,7 @@ th.sortArrows:after {
     }
     .table th,
     .table td {
-    padding: 0rem;
+    padding: 0.75rem;
     }
     h1 {
         font-size: 6rem
@@ -1283,6 +1283,8 @@ th.dnSortArrow:after,
 th.upSortArrow:after {
     position:absolute;
     right:10px;
+    left:null;
+    bottom:null
 }
 }
 
