@@ -839,199 +839,6 @@ h1.banner__heading,
 	overflow: hidden;
     }
 }
-
-
-/* Desktops and laptops ----------- */
-
-@media screen and (min-width: 1024px) {
-    /*Flexbox grid layout*/
-    .content__grid {
-        padding: 4rem 0 2rem 0;
-        grid-template-columns: 1fr 1fr;
-    }
-    .content__grid .content__grid__item:nth-of-type(2n+1):not(.content__grid__item.span__column)
-    /*Odd, 1,3,5,7 etc.*/
-    {
-        grid-column: 1;
-    }
-    .content__grid .content__grid__item:nth-of-type(2n):not(.content__grid__item.span__column)
-    /*Even, 2,4,5,6 etc.*/
-    {
-        grid-column: 2;
-    }
-    .content__grid .content__grid__item.span__column {
-        grid-column: span 2;
-    }
-    /*Page*/
-    .main {
-        grid-column: 2 / -1;
-    }
-    .wrapper {
-        grid-template-columns: minmax(250px, calc(12.5% + 50px)) 1fr;
-    }
-    /*Navigation menu*/
-    .nav {
-        display: flex;
-        grid-column: 1 / 2;
-        height: 100vh;
-        position: fixed;
-        width: auto;
-    }
-    .nav__menu {
-        padding: 6.5rem 4rem;
-    }
-    .nav li {
-        display: block;
-    }
-    .nav .menu__close {
-        display: none;
-    }
-    div.menu__arrow {
-        display: block;
-    }
-    /*Headers*/
-    .section__header {
-        padding: 2rem 0;
-    }
-    .section__header__background {
-        padding: 3rem 2rem 2rem 2rem;
-    }
-    .section__header {
-        text-align: left;
-        justify-content: left;
-    }
-    #person {
-        margin-left: 2rem;
-    }
-    #instafeed .instapic {
-        flex: 1 0 20%;
-    }
-    .table th,
-    .table td {
-    padding: 0rem;
-    }
-    h1 {
-        font-size: 6rem
-    }
-}
-
-
-/* ==========================================================================
-   Animated homepage
-   ========================================================================== */
-
-svg {
-    visibility: visible;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-}
-
-
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-.hidden {
-    display: none !important;
-    visibility: hidden;
-}
-
-.visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-}
-
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
-}
-
-.invisible {
-    visibility: hidden;
-}
-
-.clearfix:before,
-.clearfix:after {
-    content: " ";
-    display: table;
-}
-
-.clearfix:after {
-    clear: both;
-}
-
-.clearfix {
-    *zoom: 1;
-}
-
-
-/* ==========================================================================
-   Print styles
-   ========================================================================== */
-
-@media print {
-    *,
-    *:before,
-    *:after {
-        background: transparent !important;
-        color: #000 !important;
-        box-shadow: none !important;
-        text-shadow: none !important;
-    }
-    a,
-    a:visited {
-        text-decoration: underline;
-    }
-    a[href]:after {
-        content: " (" attr(href) ")";
-    }
-    abbr[title]:after {
-        content: " (" attr(title) ")";
-    }
-    a[href^="#"]:after,
-    a[href^="javascript:"]:after {
-        content: "";
-    }
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
-    thead {
-        display: table-header-group;
-    }
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
-    img {
-        max-width: 100% !important;
-    }
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
-    h2,
-    h3 {
-        page-break-after: avoid;
-    }
-}
-
-
 /*** Work examples ***/
 
 .table {
@@ -1235,15 +1042,16 @@ svg {
 th.sortArrows,
 th.dnSortArrow,
 th.upSortArrow {
-    padding-right: 40px;
+    padding-right: 0px;
+    padding-bottom:1.5rem;
 }
 
 th.sortArrows:after,
 th.dnSortArrow:after,
 th.upSortArrow:after {
-    float: right;
     position:absolute;
-    right:10px;
+    left:10px;
+    bottom:0;
 }
 
 th.dnSortArrow:after {
@@ -1392,3 +1200,206 @@ th.sortArrows:after {
 #bookmarkExample :target {
     animation: highlight 1.5s;
 }
+
+/* Desktops and laptops ----------- */
+
+@media screen and (min-width: 1024px) {
+    /*Flexbox grid layout*/
+    .content__grid {
+        padding: 4rem 0 2rem 0;
+        grid-template-columns: 1fr 1fr;
+    }
+    .content__grid .content__grid__item:nth-of-type(2n+1):not(.content__grid__item.span__column)
+    /*Odd, 1,3,5,7 etc.*/
+    {
+        grid-column: 1;
+    }
+    .content__grid .content__grid__item:nth-of-type(2n):not(.content__grid__item.span__column)
+    /*Even, 2,4,5,6 etc.*/
+    {
+        grid-column: 2;
+    }
+    .content__grid .content__grid__item.span__column {
+        grid-column: span 2;
+    }
+    /*Page*/
+    .main {
+        grid-column: 2 / -1;
+    }
+    .wrapper {
+        grid-template-columns: minmax(250px, calc(12.5% + 50px)) 1fr;
+    }
+    /*Navigation menu*/
+    .nav {
+        display: flex;
+        grid-column: 1 / 2;
+        height: 100vh;
+        position: fixed;
+        width: auto;
+    }
+    .nav__menu {
+        padding: 6.5rem 4rem;
+    }
+    .nav li {
+        display: block;
+    }
+    .nav .menu__close {
+        display: none;
+    }
+    div.menu__arrow {
+        display: block;
+    }
+    /*Headers*/
+    .section__header {
+        padding: 2rem 0;
+    }
+    .section__header__background {
+        padding: 3rem 2rem 2rem 2rem;
+    }
+    .section__header {
+        text-align: left;
+        justify-content: left;
+    }
+    #person {
+        margin-left: 2rem;
+    }
+    #instafeed .instapic {
+        flex: 1 0 20%;
+    }
+    .table th,
+    .table td {
+    padding: 0rem;
+    }
+    h1 {
+        font-size: 6rem
+    }
+    th.sortArrows,
+th.dnSortArrow,
+th.upSortArrow {
+    padding-right: 40px;
+}
+
+th.sortArrows:after,
+th.dnSortArrow:after,
+th.upSortArrow:after {
+    position:absolute;
+    right:10px;
+}
+}
+
+
+/* ==========================================================================
+   Animated homepage
+   ========================================================================== */
+
+svg {
+    visibility: visible;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+    thead {
+        display: table-header-group;
+    }
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+    img {
+        max-width: 100% !important;
+    }
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
