@@ -149,7 +149,7 @@ const shrinkNav = () => {
 
 
 
-menuProps.closeExpNav.addEventListener("click", () => {
+menuProps.closeExpNav.parentNode.addEventListener("click", () => {
     if (menuProps.closeExpNavToggle.className == menuProps.navUp) {
         shrinkNav();
     } else {
