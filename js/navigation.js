@@ -149,11 +149,10 @@ const shrinkNav = () => {
 
 
 
-menuProps.closeExpNav.parentNode.addEventListener("click", () => {
-    console.log(menuProps.closeExpNavToggle.style.display);
-    if (menuProps.closeExpNavToggle.className == menuProps.navUp && menuProps.closeExpNav.style.display == "inline-block") {
+menuProps.navBar.addEventListener("click", () => {
+    if (menuProps.closeExpNavToggle.className == menuProps.navUp) {
         shrinkNav();
-    } else if (menuProps.closeExpNav.style.display == "inline-block"){
+    } else {
         expandNav();
     }
 });
