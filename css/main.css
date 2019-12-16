@@ -1283,8 +1283,8 @@ th.dnSortArrow:after,
 th.upSortArrow:after {
     position:absolute;
     right:10px;
-    left:null;
-    bottom:null
+    left:auto;
+    bottom:auto
 }
 }
 
