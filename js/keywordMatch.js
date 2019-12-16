@@ -7,7 +7,6 @@
                 }
             });
             const data = await result.json();
-            console.log(data)
             let title, terms, url, link, match, allTerms;
             for (let i = 0; i < data.length; i++) {
                 let linkMatch = data[i];
@@ -37,7 +36,7 @@
         }
     }
 
-    keywordText('#targetKeymatch', 'gm', '(?![^<]*\<\/a\>)(?![^<]*\<\/h)')
+    keywordText('#targetKeymatch', 'gm', '(?![^<]*\<\/a\>)(?![^<]*\<\/h)(?![^<]*\<\/t)')
 
     //keywordText('#targetKeymatch', 'g', '(?![^<]*>|[^<>]*<\/)')
     /*function removeShortestMatch(arr, matchString) {
