@@ -38,3 +38,18 @@ async function keywordText(targetText, scope, RegExpression) {
     }
 }
 keywordText('#targetKeymatch', 'gm', '(?![^<]*\<\/a\>)(?![^<]*\<\/h)')
+/* A better solution would be a proper HTML parse, like this 
+    function findMatches(target, para, element = para) {
+    let child = element.firstChild;
+    while (child) {
+        if (child.nodeType === 3 && child.nodeValue.includes(target)) {
+            const a = child.parentNode.closest("a");
+            if (!a || !para.contains(a)) {
+                console.log(`Found in '${child.nodeValue}'`);
+            }
+        }
+        child = child.nextSibling;
+    }
+}
+
+findMatches("example", document.getElementById("theParagraph"));*/
