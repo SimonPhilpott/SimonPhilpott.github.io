@@ -461,7 +461,7 @@
     <!--Keyword match-->
     <script src="js/keywordMatch.js"></script>
     <script>
-        keywordText('#targetKeymatch', 'gm', '(?!\<\/a>)(?!\<\/h)')
+        keywordText('#targetKeymatch', 'gm', '(?![^<]*\<\/a\>)(?![^<]*\<\/h)(?![^<]*\<\/t)')
     </script>
     <!--Responsive tooltip-->
     <script src="js/responsiveTooltip.js"></script>
