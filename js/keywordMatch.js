@@ -1,4 +1,40 @@
-    async function keywordText(targetText, scope, RegExpression) {
+  var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            checkMatch(this.responseText);
+        }
+    };
+
+    xhttp.open("GET", "/js/keywordMatchesPortfolio.json", true);
+    xhttp.send();
+
+    function checkMatch(source) {
+        var pages = JSON.parse(source);
+        var title, terms, url, link, match, allTerms;
+        for (var i = 0; i < pages.length; i++) {
+            var linkMatch = pages[i];
+            title = linkMatch.title;
+            terms = linkMatch.terms;
+            url = linkMatch.url;
+            link = linkMatch.link;
+            match = linkMatch.match;
+	allTerms = title+", "+terms;
+            // Remove any false, nul or "" terms
+            matchList = allTerms.split(", ").filter(Boolean);
+	matchList.forEach(function(entry) {
+            // If the title or tag match (Exactly), but aren't already anchor links/buttons
+             var expression= entry+"(?![^<]*\<\/a\>)(?![^<]*\<\/h)(?![^<]*\<\/t)";
+              var rx = new RegExp(expression, 'g');
+              var result = document.querySelector('#targetKeymatch').innerHTML.match(rx);
+               if (result){
+               console.log(result)
+                var constructedLink = "<a " + "href='" + url + "' " + "class='" + link + " generated" + "' target='_blank'>" + entry + "</a>";      
+	  document.querySelector('#targetKeymatch').innerHTML = document.querySelector('#targetKeymatch').innerHTML.replace(rx, constructedLink);
+               }
+            });        
+          }
+    }    
+/*async function keywordText(targetText, scope, RegExpression) {
         try {
             const result = await fetch('/js/keywordMatchesPortfolio.json', {
                 method: 'GET',
@@ -36,7 +72,7 @@
         }
     }
 
-    keywordText('#targetKeymatch', 'gm', '(?![^<]*\<\/a\>)(?![^<]*\<\/h)(?![^<]*\<\/t)')
+    keywordText('#targetKeymatch', 'gm', '(?![^<]*\<\/a\>)(?![^<]*\<\/h)(?![^<]*\<\/t)')*/
 
     //keywordText('#targetKeymatch', 'g', '(?![^<]*>|[^<>]*<\/)')
     /*function removeShortestMatch(arr, matchString) {
