@@ -847,6 +847,7 @@ h1.banner__heading,
     margin-bottom: 1rem;
     background-color: #212529;
     color: #fff;
+    display:none;
 }
 
 .table th,
