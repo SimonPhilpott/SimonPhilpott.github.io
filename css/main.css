@@ -833,9 +833,8 @@ h1.banner__heading,
     }
     .table th,
     .table td {
-    padding: 0rem;
-    text-overflow: ellipsis;
-	white-space: nowrap;
+        padding: 0rem;
+        text-overflow: ellipsis;
 	overflow: hidden;
     }
 }
@@ -847,7 +846,6 @@ h1.banner__heading,
     margin-bottom: 1rem;
     background-color: #212529;
     color: #fff;
-    display:none;
 }
 
 .table th,
