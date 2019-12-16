@@ -150,9 +150,9 @@ const shrinkNav = () => {
 
 
 menuProps.closeExpNav.parentNode.addEventListener("click", () => {
-    if (menuProps.closeExpNavToggle.className == menuProps.navUp) {
+    if (menuProps.closeExpNavToggle.className == menuProps.navUp && menuProps.closeExpNavToggle.style.display == "block") {
         shrinkNav();
-    } else {
+    } else if (menuProps.closeExpNavToggle.style.display == "block"){
         expandNav();
     }
 });
