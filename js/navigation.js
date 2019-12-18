@@ -34,14 +34,11 @@ for (let i = 0; i < menuProps.menuLinks.length; i++) {
 const matchPageToMenu = () => {
     const offsetY = window.innerHeight / 2;
     for (let i = 0; i < menuProps.pages.length; i++) {
-        /*let selector = menuProps.pages[i].id,
+        let selector = menuProps.pages[i].id,
             selectorTop = document.querySelector(`#${selector}`).getBoundingClientRect().top,
             targetMenuItem = document.querySelector(`[data-identity='${selector}']`),
-            targetMenuItemState = targetMenuItem.getAttribute("data-state");*/
-      let selector = menuProps.pages[i].id;
-      let selectorTwo = `#${selector}`;
-            console.log(selectorTwo);
-      /*if (selectorTop >= 0 && selectorTop <= (window.innerHeight - offsetY)) {
+            targetMenuItemState = targetMenuItem.getAttribute("data-state");
+      if (selectorTop >= 0 && selectorTop <= (window.innerHeight - offsetY)) {
             if (targetMenuItemState != "true") {
                 console.log(selector);
                 targetMenuItem.setAttribute("data-state", "true");
@@ -49,7 +46,7 @@ const matchPageToMenu = () => {
             }
         } else {
             targetMenuItem.setAttribute("data-state", "false");
-        }*/
+        }
     }
 }
 
