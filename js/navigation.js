@@ -18,19 +18,6 @@ const menuProps = {
 };
 let shrunkNav = false;
 
-function getRelativeClientRect(el) {
-  var rect = el.getBoundingClientRect(),
-      parentRect = el.offsetParent.getBoundingClientRect();
-  return {
-    bottom: parentRect.bottom - rect.bottom,
-    height: rect.height,
-    left: rect.left - parentRect.left,
-    right: parentRect.right - rect.right,
-    top: rect.top - parentRect.top,
-    width: rect.width
-  };
-}
-
 /*Move the arrow*/
 const menuArrowMove = (item) => {
     TweenLite.to(menuProps.menuArrow, 0.5, { top: item.getAttribute('data-position'), force3D: true });
@@ -39,7 +26,7 @@ const menuArrowMove = (item) => {
 }
 
 for (let i = 0; i < menuProps.menuLinks.length; i++) {
-    console.log(menuProps.menuLinks[i].innerText + getRelativeClientRect(menuProps.menuLinks[i]));
+    console.log(menuProps.menuLinks[i].innerText + " : " + menuProps.menuLinks[i].getBoundingClientRect().top);
     menuProps.menuLinks[i].addEventListener('click', function() {
         menuArrowMove(this);
     });
