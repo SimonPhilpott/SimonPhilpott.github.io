@@ -58,7 +58,7 @@ const matchPageToMenu = () => {
 
 document.addEventListener("DOMContentLoaded", function() {
     if (location.hash){
-        let targetMenuItem = `"[data-identity='${location.hash.substr(1)}']"`;
+        let targetMenuItem = `[data-identity='${location.hash.substr(1)}']`;
         console.log(targetMenuItem);
         document.querySelector(targetMenuItem).click();
     }    
