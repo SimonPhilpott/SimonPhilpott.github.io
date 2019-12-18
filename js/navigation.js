@@ -1,3 +1,36 @@
+/*let mainNavLinks = document.querySelectorAll("nav ul li a");
+let mainSections = document.querySelectorAll("main section");
+
+let lastId;
+let cur = [];
+
+// This should probably be throttled.
+// Especially because it triggers during smooth scrolling.
+// https://lodash.com/docs/4.17.10#throttle
+// You could do like...
+// window.addEventListener("scroll", () => {
+//    _.throttle(doThatStuff, 100);
+// });
+// Only not doing it here to keep this Pen dependency-free.
+
+window.addEventListener("scroll", event => {
+  let fromTop = window.scrollY;
+
+  mainNavLinks.forEach(link => {
+    let section = document.querySelector(link.hash);
+
+    if (
+      section.offsetTop <= fromTop &&
+      section.offsetTop + section.offsetHeight > fromTop
+    ) {
+      link.classList.add("current");
+    } else {
+      link.classList.remove("current");
+    }
+  });
+});*/
+
+
 /*Nav constants*/
 const menuProps = {
     navHeight: document.querySelector(".nav").clientHeight - 32,
@@ -17,18 +50,18 @@ const menuProps = {
     mediaQueryRes: "(min-width: 1024px)"
 };
 let shrunkNav = false;
-
+console.log(menuProps.menuLinks.innerText + " : clientHeight = " + menuProps.menuLinks.clientHeight + " : getBoundingClientRect() = " + menuProps.menuLinks.getBoundingClientRect());
 /*Move the arrow*/
-const menuArrowMove = (position) => {
-    TweenLite.to(menuProps.menuArrow, 0.5, { top: position, force3D: true });
+const menuArrowMove = (item) => {
+    console.log("arrow move")
+    TweenLite.to(menuProps.menuArrow, 0.5, { top: item.getAttribute('data-position'), force3D: true });
+    //TweenMax.to(menuProps.menuArrow, 0.5, { y: item.getBoundingClientRect().top - 95 });
+    //menuProps.menuArrow.style.top = item.getAttribute('data-position');
 }
 
 for (let i = 0; i < menuProps.menuLinks.length; i++) {
-    //console.log(menuProps.menuLinks[i].innerText + " top: " + menuProps.menuLinks[i].getBoundingClientRect().top + " height: " + menuProps.menuLinks[i].offsetHeight);
-    let offsetYPos = menuProps.menuLinks[i].offsetHeight /2;
     menuProps.menuLinks[i].addEventListener('click', function() {
-        //menuArrowMove(this, menuProps.menuLinks[i].getBoundingClientRect().top - offsetYPos+"px");
-        menuArrowMove(menuProps.menuLinks[i].getBoundingClientRect().top - offsetYPos+"px");
+        menuArrowMove(this);
     });
 }
 
@@ -36,40 +69,30 @@ for (let i = 0; i < menuProps.menuLinks.length; i++) {
 const matchPageToMenu = () => {
     const offsetY = window.innerHeight / 2;
     for (let i = 0; i < menuProps.pages.length; i++) {
-        let selector = "#"+menuProps.pages[i].id;/*
-            selectorTop = document.querySelector(selector).getBoundingClientRect().top;*/
-        console.log(selector);
-        
-        /*,
+        let selector = menuProps.pages[i].id,
+            selectorTop = document.querySelector(`#${selector}`).getBoundingClientRect().top,
             targetMenuItem = document.querySelector(`[data-identity='${selector}']`),
             targetMenuItemState = targetMenuItem.getAttribute("data-state");
-            console.log("selector: " + selector + " selectorTop: " + selectorTop +  "targetMenuItem: " + targetMenuItem)*/
-        /*if (selectorTop >= 0 && selectorTop <= (window.innerHeight - offsetY)) {
+        if (selectorTop >= 0 && selectorTop <= (window.innerHeight - offsetY)) {
+
             if (targetMenuItemState != "true") {
                 console.log(selector);
                 targetMenuItem.setAttribute("data-state", "true");
-                let offsetYPos = targetMenuItem.offsetHeight /2;
-                console.log("offsetYPos "+ offsetYPos + " targetMenuItem.getBoundingClientRect().top "+ targetMenuItem.getBoundingClientRect().top )
-                //menuArrowMove(targetMenuItem, targetMenuItem.getBoundingClientRect().top - offsetYPos+"px")
-                menuArrowMove(targetMenuItem.getBoundingClientRect().top - offsetYPos+"px")
+                menuArrowMove(targetMenuItem);
             }
         } else {
             targetMenuItem.setAttribute("data-state", "false");
-        }*/
+        }
+
     }
 }
 
 /* On first load*/
 
 document.addEventListener("DOMContentLoaded", function() {
-    /*if (location.hash){
-        let targetMenuItem = `[data-identity='${location.hash.substr(1)}']`;
-        console.log(targetMenuItem);
-        document.querySelector(targetMenuItem).click();
-    }    */
     if (window.matchMedia('(min-width: 1024px)').matches) {
         //Wide viewport
-        //matchPageToMenu();
+        matchPageToMenu();
     } else {
         //Small viewport
         checkPosition();
@@ -186,5 +209,4 @@ menuProps.closeExpNav.addEventListener("click", () => {
             //const leafEndPosititon = leafStartPosititon + leafSize(i);
         vinePot.append(newLeaves);
         //TweenLite.fromTo(newLeaves, 2, { opacity: 0, y: leafStartPosititon, scale: "0" }, { opacity: 1, y: leafEndPosititon, scale: `${leafSize(i)}` });
-
     }*/
