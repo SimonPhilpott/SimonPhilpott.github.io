@@ -57,6 +57,10 @@ const matchPageToMenu = () => {
 /* On first load*/
 
 document.addEventListener("DOMContentLoaded", function() {
+    if (location.hash){
+        let targetMenuItem = location.hash.substr(1);
+        console.log(document.querySelector([data-identity=targetMenuItem]));
+    }    
     if (window.matchMedia('(min-width: 1024px)').matches) {
         //Wide viewport
         matchPageToMenu();
