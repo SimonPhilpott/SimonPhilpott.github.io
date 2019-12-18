@@ -37,8 +37,8 @@ const matchPageToMenu = () => {
     const offsetY = window.innerHeight / 2;
     for (let i = 0; i < menuProps.pages.length; i++) {
         let selector = menuProps.pages[i].id,
-            selectorTop = document.querySelector("`#${selector}`").getBoundingClientRect().top;
-        console.log(selectorTop);
+            selectorTop = document.querySelector(`"#${selector}"`).getBoundingClientRect().top;
+        console.log(document.querySelector(`"#${selector}"`));
         
         /*,
             targetMenuItem = document.querySelector(`[data-identity='${selector}']`),
