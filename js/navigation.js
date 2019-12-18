@@ -36,11 +36,12 @@ for (let i = 0; i < menuProps.menuLinks.length; i++) {
 const matchPageToMenu = () => {
     const offsetY = window.innerHeight / 2;
     for (let i = 0; i < menuProps.pages.length; i++) {
-        let selector = menuProps.pages[i].id,
+        let selector = menuProps.pages[i].id;
+        console.log(selector)/*,
             selectorTop = document.querySelector(`#${selector}`).getBoundingClientRect().top,
             targetMenuItem = document.querySelector(`[data-identity='${selector}']`),
             targetMenuItemState = targetMenuItem.getAttribute("data-state");
-            console.log("selector: " + selector + " selectorTop: " + selectorTop +  "targetMenuItem: " + targetMenuItem)
+            console.log("selector: " + selector + " selectorTop: " + selectorTop +  "targetMenuItem: " + targetMenuItem)*/
         /*if (selectorTop >= 0 && selectorTop <= (window.innerHeight - offsetY)) {
             if (targetMenuItemState != "true") {
                 console.log(selector);
