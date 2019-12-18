@@ -17,7 +17,21 @@ const menuProps = {
     mediaQueryRes: "(min-width: 1024px)"
 };
 let shrunkNav = false;
-console.log(menuProps.menuLinks.innerText + menuProps.menuLinks.getBoundingClientRect());
+console.log(menuProps.menuLinks.innerText + getRelativeClientRect(menuProps.menuLinks));
+
+function getRelativeClientRect(el) {
+  var rect = el.getBoundingClientRect(),
+      parentRect = el.offsetParent.getBoundingClientRect();
+  return {
+    bottom: parentRect.bottom - rect.bottom,
+    height: rect.height,
+    left: rect.left - parentRect.left,
+    right: parentRect.right - rect.right,
+    top: rect.top - parentRect.top,
+    width: rect.width
+  };
+}
+
 /*Move the arrow*/
 const menuArrowMove = (item) => {
     console.log("arrow move")
