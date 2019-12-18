@@ -40,7 +40,7 @@ const matchPageToMenu = () => {
             selectorTop = document.querySelector(`#${selector}`).getBoundingClientRect().top,
             targetMenuItem = document.querySelector(`[data-identity='${selector}']`),
             targetMenuItemState = targetMenuItem.getAttribute("data-state");
-        if (selectorTop >= 0 && selectorTop <= (window.innerHeight - offsetY)) {
+        /*if (selectorTop >= 0 && selectorTop <= (window.innerHeight - offsetY)) {
             if (targetMenuItemState != "true") {
                 console.log(selector);
                 targetMenuItem.setAttribute("data-state", "true");
@@ -49,7 +49,7 @@ const matchPageToMenu = () => {
                 //menuArrowMove(targetMenuItem, targetMenuItem.getBoundingClientRect().top - offsetYPos+"px")
                 menuArrowMove(targetMenuItem.getBoundingClientRect().top - offsetYPos+"px")
             }
-        } else {
+        }*/ else {
             targetMenuItem.setAttribute("data-state", "false");
         }
     }
