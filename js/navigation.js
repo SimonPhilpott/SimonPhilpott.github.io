@@ -59,7 +59,7 @@ const matchPageToMenu = () => {
 document.addEventListener("DOMContentLoaded", function() {
     if (location.hash){
         let targetMenuItem = document.querySelector(`"[data-identity='${location.hash.substr(1)}'"`);
-        console.log(targetMenuItem);
+        targetMenuItem.click();
     }    
     if (window.matchMedia('(min-width: 1024px)').matches) {
         //Wide viewport
