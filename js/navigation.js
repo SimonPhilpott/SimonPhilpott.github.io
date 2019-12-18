@@ -17,7 +17,6 @@ const menuProps = {
     mediaQueryRes: "(min-width: 1024px)"
 };
 let shrunkNav = false;
-console.log(menuProps.menuLinks.innerText + getRelativeClientRect(menuProps.menuLinks));
 
 function getRelativeClientRect(el) {
   var rect = el.getBoundingClientRect(),
@@ -41,6 +40,7 @@ const menuArrowMove = (item) => {
 }
 
 for (let i = 0; i < menuProps.menuLinks.length; i++) {
+    console.log(menuProps.menuLinks[i].innerText + getRelativeClientRect(menuProps.menuLinks[i]));
     menuProps.menuLinks[i].addEventListener('click', function() {
         menuArrowMove(this);
     });
