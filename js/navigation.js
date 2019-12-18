@@ -46,7 +46,7 @@ const matchPageToMenu = () => {
             if (targetMenuItemState != "true") {
                 console.log(selector);
                 targetMenuItem.setAttribute("data-state", "true");
-                menuArrowMove(targetMenuItem,'');
+                //menuArrowMove(targetMenuItem,'');
             }
         } else {
             targetMenuItem.setAttribute("data-state", "false");
