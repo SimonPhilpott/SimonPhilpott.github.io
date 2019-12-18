@@ -40,7 +40,7 @@ const matchPageToMenu = () => {
             targetMenuItemState = targetMenuItem.getAttribute("data-state");*/
       let selector = menuProps.pages[i].id;
             console.log(selector);
-      if (selectorTop >= 0 && selectorTop <= (window.innerHeight - offsetY)) {
+      /*if (selectorTop >= 0 && selectorTop <= (window.innerHeight - offsetY)) {
             if (targetMenuItemState != "true") {
                 console.log(selector);
                 targetMenuItem.setAttribute("data-state", "true");
@@ -48,7 +48,7 @@ const matchPageToMenu = () => {
             }
         } else {
             targetMenuItem.setAttribute("data-state", "false");
-        }
+        }*/
     }
 }
 
