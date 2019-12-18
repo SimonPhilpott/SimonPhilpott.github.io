@@ -20,10 +20,7 @@ let shrunkNav = false;
 
 /*Move the arrow*/
 const menuArrowMove = (item, position) => {
-    //TweenLite.to(menuProps.menuArrow, 0.5, { top: item.getAttribute('data-position'), force3D: true });
     TweenLite.to(menuProps.menuArrow, 0.5, { top: position, force3D: true });
-    //TweenMax.to(menuProps.menuArrow, 0.5, { y: item.getBoundingClientRect().top - 95 });
-    //menuProps.menuArrow.style.top = item.getAttribute('data-position');
 }
 
 for (let i = 0; i < menuProps.menuLinks.length; i++) {
@@ -47,7 +44,8 @@ const matchPageToMenu = () => {
             if (targetMenuItemState != "true") {
                 console.log(selector);
                 targetMenuItem.setAttribute("data-state", "true");
-                //menuArrowMove(targetMenuItem,'');
+                let offsetYPos = targetMenuItem.offsetHeight /2;
+                menuArrowMove(targetMenuItem, targetMenuItem.getBoundingClientRect().top - offsetYPos+"px")
             }
         } else {
             targetMenuItem.setAttribute("data-state", "false");
