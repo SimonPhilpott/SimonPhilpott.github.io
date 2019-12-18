@@ -33,7 +33,6 @@ function getRelativeClientRect(el) {
 
 /*Move the arrow*/
 const menuArrowMove = (item) => {
-    console.log("arrow move")
     TweenLite.to(menuProps.menuArrow, 0.5, { top: item.getAttribute('data-position'), force3D: true });
     //TweenMax.to(menuProps.menuArrow, 0.5, { y: item.getBoundingClientRect().top - 95 });
     //menuProps.menuArrow.style.top = item.getAttribute('data-position');
