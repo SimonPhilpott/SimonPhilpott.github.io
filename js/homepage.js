@@ -3,10 +3,11 @@ const hpProps = {
     navHeight: document.querySelector(".nav").clientHeight - 32,
     header: document.querySelector('.section__header.contact__details'),
     welcome: document.querySelector('.section__header.contact__details+.section__content'),
-    tl: new TimelineMax()
+    // removed TimelineMax() 
+    tl: new gsap.timeline()
 };
-
-TweenLite.fromTo([hpProps.header, hpProps.welcome], 1, { opacity: 0, y: 25 }, { opacity: 1, y: 0 });
+//removed TweenLite
+gsap.fromTo([hpProps.header, hpProps.welcome], 1, { opacity: 0, y: 25 }, { opacity: 1, y: 0 });
 let h = document.querySelector('.animated_homepage').clientHeight;
 const makeParticles = () => {
     Math.randMinMax = function(t, n, a) {
@@ -24,7 +25,8 @@ const makeParticles = () => {
         let size = Math.floor(Math.random() * 5);
         particlesNew.className = 'particle';
         document.querySelector('.animated_homepage').append(particlesNew);
-        TweenLite.set(particlesNew, {
+        //removed TweenLite
+            gsap.set(particlesNew, {
             x: PosX,
             y: PosY - (size * 10),
             force3D: true,
@@ -61,9 +63,9 @@ const animateHomepage = () => {
 window.addEventListener('resize', function() {
     h = document.querySelector('.animated_homepage').clientHeight;
 }, false);
-
-var tlBorder = new TimelineMax();
+//Removed TimelineMax()
+var tlBorder = new gsap.timeline();
 
 tlBorder.to(".animated_homepage", 1, { borderWidth: 10, ease: Back.easeInOut }, 0);
-
-TweenLite.fromTo(".homepage__heading", 2, { autoAlpha: 0, y: 25 }, { autoAlpha: 1, y: 0, delay: 1 });
+//Removed TweenLite
+gsap.fromTo(".homepage__heading", 2, { autoAlpha: 0, y: 25 }, { autoAlpha: 1, y: 0, delay: 1 });
