@@ -50,7 +50,7 @@ const menuProps = {
     mediaQueryRes: "(min-width: 1024px)"
 };
 let shrunkNav = false;
-console.log(menuProps.menuLinks.innerText + " : clientHeight = " + menuProps.menuLinks.clientHeight + " : getBoundingClientRect() = " + menuProps.menuLinks.getBoundingClientRect());
+//console.log(menuProps.menuLinks.innerText + " : clientHeight = " + menuProps.menuLinks.clientHeight + " : getBoundingClientRect() = " + menuProps.menuLinks.getBoundingClientRect());
 /*Move the arrow*/
 const menuArrowMove = (item) => {
     console.log("arrow move")
