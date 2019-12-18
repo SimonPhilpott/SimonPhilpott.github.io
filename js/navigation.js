@@ -1,36 +1,3 @@
-/*let mainNavLinks = document.querySelectorAll("nav ul li a");
-let mainSections = document.querySelectorAll("main section");
-
-let lastId;
-let cur = [];
-
-// This should probably be throttled.
-// Especially because it triggers during smooth scrolling.
-// https://lodash.com/docs/4.17.10#throttle
-// You could do like...
-// window.addEventListener("scroll", () => {
-//    _.throttle(doThatStuff, 100);
-// });
-// Only not doing it here to keep this Pen dependency-free.
-
-window.addEventListener("scroll", event => {
-  let fromTop = window.scrollY;
-
-  mainNavLinks.forEach(link => {
-    let section = document.querySelector(link.hash);
-
-    if (
-      section.offsetTop <= fromTop &&
-      section.offsetTop + section.offsetHeight > fromTop
-    ) {
-      link.classList.add("current");
-    } else {
-      link.classList.remove("current");
-    }
-  });
-});*/
-
-
 /*Nav constants*/
 const menuProps = {
     navHeight: document.querySelector(".nav").clientHeight - 32,
@@ -50,13 +17,11 @@ const menuProps = {
     mediaQueryRes: "(min-width: 1024px)"
 };
 let shrunkNav = false;
-//console.log(menuProps.menuLinks.innerText + " : clientHeight = " + menuProps.menuLinks.clientHeight + " : getBoundingClientRect() = " + menuProps.menuLinks.getBoundingClientRect());
+
 /*Move the arrow*/
 const menuArrowMove = (item) => {
     console.log("arrow move")
     TweenLite.to(menuProps.menuArrow, 0.5, { top: item.getAttribute('data-position'), force3D: true });
-    //TweenMax.to(menuProps.menuArrow, 0.5, { y: item.getBoundingClientRect().top - 95 });
-    //menuProps.menuArrow.style.top = item.getAttribute('data-position');
 }
 
 for (let i = 0; i < menuProps.menuLinks.length; i++) {
@@ -69,12 +34,13 @@ for (let i = 0; i < menuProps.menuLinks.length; i++) {
 const matchPageToMenu = () => {
     const offsetY = window.innerHeight / 2;
     for (let i = 0; i < menuProps.pages.length; i++) {
-        let selector = menuProps.pages[i].id,
+        /*let selector = menuProps.pages[i].id,
             selectorTop = document.querySelector(`#${selector}`).getBoundingClientRect().top,
             targetMenuItem = document.querySelector(`[data-identity='${selector}']`),
-            targetMenuItemState = targetMenuItem.getAttribute("data-state");
-        if (selectorTop >= 0 && selectorTop <= (window.innerHeight - offsetY)) {
-
+            targetMenuItemState = targetMenuItem.getAttribute("data-state");*/
+      let selector = menuProps.pages[i].id;
+            console.log(selector);
+      if (selectorTop >= 0 && selectorTop <= (window.innerHeight - offsetY)) {
             if (targetMenuItemState != "true") {
                 console.log(selector);
                 targetMenuItem.setAttribute("data-state", "true");
@@ -83,7 +49,6 @@ const matchPageToMenu = () => {
         } else {
             targetMenuItem.setAttribute("data-state", "false");
         }
-
     }
 }
 
