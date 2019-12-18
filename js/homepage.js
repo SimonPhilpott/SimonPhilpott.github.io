@@ -3,10 +3,10 @@ const hpProps = {
     navHeight: document.querySelector(".nav").clientHeight - 32,
     header: document.querySelector('.section__header.contact__details'),
     welcome: document.querySelector('.section__header.contact__details+.section__content'),
-    // removed TimelineMax() 
-    tl: new gsap.timeline()
+    // removed TimelineMax() / gsap.timeline()
+    tl: new TimelineMax()
 };
-//removed TweenLite
+//removed TweenLite / gsap
 gsap.fromTo([hpProps.header, hpProps.welcome], 1, { opacity: 0, y: 25 }, { opacity: 1, y: 0 });
 let h = document.querySelector('.animated_homepage').clientHeight;
 const makeParticles = () => {
@@ -25,8 +25,8 @@ const makeParticles = () => {
         let size = Math.floor(Math.random() * 5);
         particlesNew.className = 'particle';
         document.querySelector('.animated_homepage').append(particlesNew);
-        //removed TweenLite
-            gsap.set(particlesNew, {
+        //removed TweenLite / gsap
+            TweenLite.set(particlesNew, {
             x: PosX,
             y: PosY - (size * 10),
             force3D: true,
@@ -63,9 +63,9 @@ const animateHomepage = () => {
 window.addEventListener('resize', function() {
     h = document.querySelector('.animated_homepage').clientHeight;
 }, false);
-//Removed TimelineMax()
-var tlBorder = new gsap.timeline();
+//Removed TimelineMax() / gsap.timeline();
+var tlBorder = new TimelineMax();
 
 tlBorder.to(".animated_homepage", 1, { borderWidth: 10, ease: Back.easeInOut }, 0);
-//Removed TweenLite
-gsap.fromTo(".homepage__heading", 2, { autoAlpha: 0, y: 25 }, { autoAlpha: 1, y: 0, delay: 1 });
+//Removed TweenLite / gsap
+TweenLite.fromTo(".homepage__heading", 2, { autoAlpha: 0, y: 25 }, { autoAlpha: 1, y: 0, delay: 1 });
