@@ -36,8 +36,8 @@ for (let i = 0; i < menuProps.menuLinks.length; i++) {
 const matchPageToMenu = () => {
     const offsetY = window.innerHeight / 2;
     for (let i = 0; i < menuProps.pages.length; i++) {
-        let selector = "#"+menuProps.pages[i].id,
-            selectorTop = document.querySelector(selector).getBoundingClientRect().top;
+        let selector = "#"+menuProps.pages[i].id;/*
+            selectorTop = document.querySelector(selector).getBoundingClientRect().top;*/
         console.log(selector);
         
         /*,
