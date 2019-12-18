@@ -45,6 +45,7 @@ const matchPageToMenu = () => {
                 console.log(selector);
                 targetMenuItem.setAttribute("data-state", "true");
                 let offsetYPos = targetMenuItem.offsetHeight /2;
+                console.log(offsetYPos + " " + targetMenuItem.getBoundingClientRect().top - offsetYPos+"px")
                 menuArrowMove(targetMenuItem, targetMenuItem.getBoundingClientRect().top - offsetYPos+"px")
             }
         } else {
