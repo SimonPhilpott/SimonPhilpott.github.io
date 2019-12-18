@@ -19,7 +19,7 @@ const menuProps = {
 let shrunkNav = false;
 
 /*Move the arrow*/
-const menuArrowMove = (item, position) => {
+const menuArrowMove = (position) => {
     TweenLite.to(menuProps.menuArrow, 0.5, { top: position, force3D: true });
 }
 
@@ -27,7 +27,8 @@ for (let i = 0; i < menuProps.menuLinks.length; i++) {
     //console.log(menuProps.menuLinks[i].innerText + " top: " + menuProps.menuLinks[i].getBoundingClientRect().top + " height: " + menuProps.menuLinks[i].offsetHeight);
     let offsetYPos = menuProps.menuLinks[i].offsetHeight /2;
     menuProps.menuLinks[i].addEventListener('click', function() {
-        menuArrowMove(this, menuProps.menuLinks[i].getBoundingClientRect().top - offsetYPos+"px");
+        //menuArrowMove(this, menuProps.menuLinks[i].getBoundingClientRect().top - offsetYPos+"px");
+        menuArrowMove(menuProps.menuLinks[i].getBoundingClientRect().top - offsetYPos+"px");
     });
 }
 
@@ -46,6 +47,7 @@ const matchPageToMenu = () => {
                 let offsetYPos = targetMenuItem.offsetHeight /2;
                 console.log("offsetYPos "+ offsetYPos + " targetMenuItem.getBoundingClientRect().top "+ targetMenuItem.getBoundingClientRect().top )
                 //menuArrowMove(targetMenuItem, targetMenuItem.getBoundingClientRect().top - offsetYPos+"px")
+                menuArrowMove(targetMenuItem.getBoundingClientRect().top - offsetYPos+"px")
             }
         } else {
             targetMenuItem.setAttribute("data-state", "false");
