@@ -7,7 +7,7 @@ const hpProps = {
     tl: new TimelineMax()
 };
 //removed TweenLite / gsap
-gsap.fromTo([hpProps.header, hpProps.welcome], 1, { opacity: 0, y: 25 }, { opacity: 1, y: 0 });
+TweenLite.fromTo([hpProps.header, hpProps.welcome], 1, { opacity: 0, y: 25 }, { opacity: 1, y: 0 });
 let h = document.querySelector('.animated_homepage').clientHeight;
 const makeParticles = () => {
     Math.randMinMax = function(t, n, a) {
