@@ -194,7 +194,6 @@ async function getGlucose() {
             }
         });
         const data = await result.json();
-        console.log(data);
         /*** FOR TESTING ***/
         //const BGmmol = 3.1;
         //const BGmmol = 3.2;
