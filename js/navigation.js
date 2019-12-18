@@ -39,7 +39,8 @@ const matchPageToMenu = () => {
             targetMenuItem = document.querySelector(`[data-identity='${selector}']`),
             targetMenuItemState = targetMenuItem.getAttribute("data-state");*/
       let selector = menuProps.pages[i].id;
-            console.log(selector);
+      let selectorTwo = `#${selector}`;
+            console.log(selectorTwo);
       /*if (selectorTop >= 0 && selectorTop <= (window.innerHeight - offsetY)) {
             if (targetMenuItemState != "true") {
                 console.log(selector);
