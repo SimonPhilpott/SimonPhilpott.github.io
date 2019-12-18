@@ -27,7 +27,7 @@ const menuArrowMove = (item, position) => {
 }
 
 for (let i = 0; i < menuProps.menuLinks.length; i++) {
-    console.log(menuProps.menuLinks[i].innerText + " : " + menuProps.menuLinks[i].getBoundingClientRect().top);
+    console.log(menuProps.menuLinks[i].innerText + " top: " + menuProps.menuLinks[i].getBoundingClientRect().top + " height: " + menuProps.menuLinks[i].clientHeight);
     menuProps.menuLinks[i].addEventListener('click', function() {
         menuArrowMove(this, menuProps.menuLinks[i].getBoundingClientRect().top);
     });
