@@ -40,18 +40,16 @@ const matchPageToMenu = () => {
             targetMenuItem = document.querySelector(`[data-identity='${selector}']`),
             targetMenuItemState = targetMenuItem.getAttribute("data-state");
         if (selectorTop >= 0 && selectorTop <= (window.innerHeight - offsetY)) {
-
             if (targetMenuItemState != "true") {
                 console.log(selector);
                 targetMenuItem.setAttribute("data-state", "true");
                 let offsetYPos = targetMenuItem.offsetHeight /2;
-                console.log(offsetYPos + " " + targetMenuItem.getBoundingClientRect().top - offsetYPos+"px")
-                menuArrowMove(targetMenuItem, targetMenuItem.getBoundingClientRect().top - offsetYPos+"px")
+                console.log("offsetYPos "+ offsetYPos + " targetMenuItem.getBoundingClientRect().top "+ targetMenuItem.getBoundingClientRect().top )
+                //menuArrowMove(targetMenuItem, targetMenuItem.getBoundingClientRect().top - offsetYPos+"px")
             }
         } else {
             targetMenuItem.setAttribute("data-state", "false");
         }
-
     }
 }
 
