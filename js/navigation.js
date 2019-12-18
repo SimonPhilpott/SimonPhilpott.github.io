@@ -58,14 +58,14 @@ const matchPageToMenu = () => {
 /* On first load*/
 
 document.addEventListener("DOMContentLoaded", function() {
-    if (location.hash){
+    /*if (location.hash){
         let targetMenuItem = `[data-identity='${location.hash.substr(1)}']`;
         console.log(targetMenuItem);
         document.querySelector(targetMenuItem).click();
-    }    
+    }    */
     if (window.matchMedia('(min-width: 1024px)').matches) {
         //Wide viewport
-        matchPageToMenu();
+        //matchPageToMenu();
     } else {
         //Small viewport
         checkPosition();
