@@ -19,8 +19,9 @@ const menuProps = {
 let shrunkNav = false;
 
 /*Move the arrow*/
-const menuArrowMove = (item) => {
-    TweenLite.to(menuProps.menuArrow, 0.5, { top: item.getAttribute('data-position'), force3D: true });
+const menuArrowMove = (item, position) => {
+    //TweenLite.to(menuProps.menuArrow, 0.5, { top: item.getAttribute('data-position'), force3D: true });
+    TweenLite.to(menuProps.menuArrow, 0.5, { top: position, force3D: true });
     //TweenMax.to(menuProps.menuArrow, 0.5, { y: item.getBoundingClientRect().top - 95 });
     //menuProps.menuArrow.style.top = item.getAttribute('data-position');
 }
@@ -28,7 +29,7 @@ const menuArrowMove = (item) => {
 for (let i = 0; i < menuProps.menuLinks.length; i++) {
     console.log(menuProps.menuLinks[i].innerText + " : " + menuProps.menuLinks[i].getBoundingClientRect().top);
     menuProps.menuLinks[i].addEventListener('click', function() {
-        menuArrowMove(this);
+        menuArrowMove(this, menuProps.menuLinks[i].getBoundingClientRect().top);
     });
 }
 
@@ -45,7 +46,7 @@ const matchPageToMenu = () => {
             if (targetMenuItemState != "true") {
                 console.log(selector);
                 targetMenuItem.setAttribute("data-state", "true");
-                menuArrowMove(targetMenuItem);
+                menuArrowMove(targetMenuItem,'');
             }
         } else {
             targetMenuItem.setAttribute("data-state", "false");
