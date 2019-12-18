@@ -25,8 +25,6 @@ async function keywordText(targetText, scope, RegExpression) {
                     let rx = new RegExp(expression, scope);
                     let result = document.querySelector(targetText).innerHTML.match(rx);
                     if (result) {
-                        console.log(result)
-                            //resultArray.push(result.toString());
                         var constructedLink = `<a href="${url}" class="${link} generated" target="_blank">${entry}</a>`;
                         document.querySelector(targetText).innerHTML = document.querySelector(targetText).innerHTML.replace(rx, constructedLink);
                     }
