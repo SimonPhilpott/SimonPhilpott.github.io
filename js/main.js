@@ -180,6 +180,39 @@
     window.onload = loadTweetButtons;
 
 }(window));
+// -----------------------------------------------------------------
+// | Instagram API                                           |
+// -----------------------------------------------------------------
+
+async function instaRequest(num) {
+    try {
+	const accessTopken = "IGQVJXSDBIUU90MlpnZA2VZAeUtTaHc5SVJZAMTRNazMwTkJTQXdZALUw5Sm5YX2JMaHRWY1h2R2dUQ21XR2xBSTBMSjVYZA0M2VXpQMnpra0s4VHdseVU5elBTaFV5NTE0N1cxb0RmRjlocUNsclBOTzVMMAZDZD";
+	const result = await fetch(`https://graph.instagram.com/me/media?access_token=${accessToken}&fields=media_url,media_type,caption,permalink`, {  
+            method: 'GET',
+        });
+        let instaData = await result.json();
+	    console.log(result)
+        /*for (let i = 0; i < instaData.data.length; i++) {
+            const container = document.getElementById('instafeed');
+            let imgURL = instaData.data[i].images.standard_resolution.url;
+            let imgDirectLink = instaData.data[i].link;
+            const div = document.createElement('div');
+            div.setAttribute('class', 'instapic');
+            container.appendChild(div);
+            const imgLink = document.createElement('a');
+            const img = document.createElement('img');
+            img.setAttribute('src', imgURL)
+            imgLink.setAttribute('href', imgDirectLink)
+            div.appendChild(imgLink);
+            imgLink.appendChild(img);
+        }*/
+        console.log("retrieving instagram posts");
+    } catch (error) {
+        console.log(error);
+    }
+}
+instaRequest(8);
+
 
 // -----------------------------------------------------------------
 // | Nightscout REST API                                           |
@@ -236,50 +269,3 @@ async function getGlucose() {
     let glucoseRetrieve = setInterval(() => getGlucose(), timer);
 }
 getGlucose();
-
-// -----------------------------------------------------------------
-// | Instagram API                                           |
-// -----------------------------------------------------------------
-
-async function instaRequest(num) {
-    try {
-	const accessTopken = "IGQVJXSDBIUU90MlpnZA2VZAeUtTaHc5SVJZAMTRNazMwTkJTQXdZALUw5Sm5YX2JMaHRWY1h2R2dUQ21XR2xBSTBMSjVYZA0M2VXpQMnpra0s4VHdseVU5elBTaFV5NTE0N1cxb0RmRjlocUNsclBOTzVMMAZDZD";
-	const result = await fetch(`https://graph.instagram.com/me/media?access_token=${accessToken}&fields=media_url,media_type,caption,permalink`, {  
-            method: 'GET',
-        });
-        let instaData = await result.json();
-	    console.log(result)
-        /*for (let i = 0; i < instaData.data.length; i++) {
-            const container = document.getElementById('instafeed');
-            let imgURL = instaData.data[i].images.standard_resolution.url;
-            let imgDirectLink = instaData.data[i].link;
-            const div = document.createElement('div');
-            div.setAttribute('class', 'instapic');
-            container.appendChild(div);
-            const imgLink = document.createElement('a');
-            const img = document.createElement('img');
-            img.setAttribute('src', imgURL)
-            imgLink.setAttribute('href', imgDirectLink)
-            div.appendChild(imgLink);
-            imgLink.appendChild(img);
-        }*/
-        console.log("retrieving instagram posts");
-    } catch (error) {
-        console.log(error);
-    }
-}
-instaRequest(8);
-
-/*fetch("https://instagram47.p.rapidapi.com/public_user_posts?userid=1718924098", {
-	"method": "GET",
-	"headers": {
-		"x-rapidapi-key": "fe70ba5109mshb3a1d6e99204abdp1faed7jsn5130523ec135",
-		"x-rapidapi-host": "instagram47.p.rapidapi.com"
-	}
-})
-.then(response => {
-	console.log(response);
-})
-.catch(err => {
-	console.error(err);
-});*/
