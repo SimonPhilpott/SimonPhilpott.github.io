@@ -243,10 +243,8 @@ getGlucose();
 
 async function instaRequest(num) {
     try {
-        //const accessToken = "4232554925.360a784.53e145c24e124298890b1b3795799ef6";
 	const accessTopken = "IGQVJXSDBIUU90MlpnZA2VZAeUtTaHc5SVJZAMTRNazMwTkJTQXdZALUw5Sm5YX2JMaHRWY1h2R2dUQ21XR2xBSTBMSjVYZA0M2VXpQMnpra0s4VHdseVU5elBTaFV5NTE0N1cxb0RmRjlocUNsclBOTzVMMAZDZD";
 	const result = await fetch(`https://graph.instagram.com/me/media?access_token=${accessToken}&fields=media_url,media_type,caption,permalink`, {  
-        //const result = await fetch(`https://api.instagram.com/v1/users/self/media/recent/?access_token=${accessToken}&count=${num}`, {
             method: 'GET',
         });
         let instaData = await result.json();
