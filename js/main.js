@@ -241,7 +241,7 @@ getGlucose();
 // | Instagram API                                           |
 // -----------------------------------------------------------------
 
-async function instaRequest(num) {
+/*async function instaRequest(num) {
     try {
         const accessToken = "4232554925.360a784.53e145c24e124298890b1b3795799ef6";
         const result = await fetch(`https://api.instagram.com/v1/users/self/media/recent/?access_token=${accessToken}&count=${num}`, {
@@ -267,4 +267,18 @@ async function instaRequest(num) {
         console.log(error);
     }
 }
-instaRequest(8);
+instaRequest(8);*/
+
+fetch("https://instagram47.p.rapidapi.com/public_user_posts?userid=1718924098", {
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-key": "fe70ba5109mshb3a1d6e99204abdp1faed7jsn5130523ec135",
+		"x-rapidapi-host": "instagram47.p.rapidapi.com"
+	}
+})
+.then(response => {
+	console.log(response);
+})
+.catch(err => {
+	console.error(err);
+});
