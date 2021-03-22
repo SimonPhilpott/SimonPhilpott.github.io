@@ -1209,12 +1209,12 @@ th.sortArrows:after {
         padding: 4rem 0 2rem 0;
         grid-template-columns: 1fr 1fr;
     }
-    .content__grid .content__grid__item:nth-of-type(2n+1):not(.content__grid__item.span__column)
+    .content__grid .content__grid__item:nth-of-type(2n+1) :not(.content__grid__item.span__column)
     /*Odd, 1,3,5,7 etc.*/
     {
         grid-column: 1;
     }
-    .content__grid .content__grid__item:nth-of-type(2n):not(.content__grid__item.span__column)
+    .content__grid .content__grid__item:nth-of-type(2n) :not(.content__grid__item.span__column)
     /*Even, 2,4,5,6 etc.*/
     {
         grid-column: 2;
