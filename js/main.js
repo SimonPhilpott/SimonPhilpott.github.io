@@ -269,7 +269,7 @@ getGlucose();
 }
 instaRequest(8);*/
 
-fetch("https://instagram47.p.rapidapi.com/public_user_posts?userid=1718924098", {
+/*fetch("https://instagram47.p.rapidapi.com/public_user_posts?userid=1718924098", {
 	"method": "GET",
 	"headers": {
 		"x-rapidapi-key": "fe70ba5109mshb3a1d6e99204abdp1faed7jsn5130523ec135",
@@ -281,4 +281,4 @@ fetch("https://instagram47.p.rapidapi.com/public_user_posts?userid=1718924098", 
 })
 .catch(err => {
 	console.error(err);
-});
+});*/
