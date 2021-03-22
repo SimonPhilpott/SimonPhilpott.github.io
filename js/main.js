@@ -192,10 +192,10 @@ async function instaRequest(num) {
         });
         let instaData = await result.json();
 	    console.log(instaData)
-        /*for (let i = 0; i < instaData.data.length; i++) {
+        for (let i = 0; i < instaData.data.length; i++) {
             const container = document.getElementById('instafeed');
-            let imgURL = instaData.data[i].images.standard_resolution.url;
-            let imgDirectLink = instaData.data[i].link;
+            let imgURL = instaData.data[i].media_url;
+            let imgDirectLink = instaData.data[i].permalink;
             const div = document.createElement('div');
             div.setAttribute('class', 'instapic');
             container.appendChild(div);
@@ -205,7 +205,7 @@ async function instaRequest(num) {
             imgLink.setAttribute('href', imgDirectLink)
             div.appendChild(imgLink);
             imgLink.appendChild(img);
-        }*/
+        }
         console.log("retrieving instagram posts");
     } catch (error) {
         console.log(error);
