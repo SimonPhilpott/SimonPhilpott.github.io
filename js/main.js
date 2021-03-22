@@ -248,7 +248,7 @@ async function instaRequest(num) {
             method: 'GET',
         });
         let instaData = await result.json();
-	    console.log(instaData)
+	    console.log(result)
         /*for (let i = 0; i < instaData.data.length; i++) {
             const container = document.getElementById('instafeed');
             let imgURL = instaData.data[i].images.standard_resolution.url;
