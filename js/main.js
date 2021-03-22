@@ -190,8 +190,8 @@ async function instaRequest(num) {
 	const result = await fetch(`https://graph.instagram.com/me/media?access_token=${accessToken}&fields=media_url,media_type,caption,permalink`, {  
             method: 'GET',
         });
-        //let instaData = await result.json();
-	    console.log(result)
+        let instaData = await result.json();
+	    console.log(instaData)
         /*for (let i = 0; i < instaData.data.length; i++) {
             const container = document.getElementById('instafeed');
             let imgURL = instaData.data[i].images.standard_resolution.url;
