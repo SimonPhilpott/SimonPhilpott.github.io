@@ -224,7 +224,7 @@ async function getGlucose() {
 	    const result = await fetch('https://simon-philpott-nightscout.herokuapp.com/api/v1/entries/sgv.json?count=1&token=PoppyBurrpott', {
             method: 'GET',
             headers: {
-                'Access-Control-Allow-Origin': '*'
+                /*'Access-Control-Allow-Origin': '*'*/
             }
         });
         const data = await result.json();
