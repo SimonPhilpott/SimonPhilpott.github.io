@@ -241,14 +241,16 @@ getGlucose();
 // | Instagram API                                           |
 // -----------------------------------------------------------------
 
-/*async function instaRequest(num) {
+async function instaRequest(num) {
     try {
-        const accessToken = "4232554925.360a784.53e145c24e124298890b1b3795799ef6";
-        const result = await fetch(`https://api.instagram.com/v1/users/self/media/recent/?access_token=${accessToken}&count=${num}`, {
+        //const accessToken = "4232554925.360a784.53e145c24e124298890b1b3795799ef6";
+	const result = await fetch(`https://graph.instagram.com/me/media?access_token={IGQVJXSDBIUU90MlpnZA2VZAeUtTaHc5SVJZAMTRNazMwTkJTQXdZALUw5Sm5YX2JMaHRWY1h2R2dUQ21XR2xBSTBMSjVYZA0M2VXpQMnpra0s4VHdseVU5elBTaFV5NTE0N1cxb0RmRjlocUNsclBOTzVMMAZDZD}&fields=media_url,media_type,caption,permalink`, {  
+        //const result = await fetch(`https://api.instagram.com/v1/users/self/media/recent/?access_token=${accessToken}&count=${num}`, {
             method: 'GET',
         });
         let instaData = await result.json();
-        for (let i = 0; i < instaData.data.length; i++) {
+	    console.log(instaData)
+        /*for (let i = 0; i < instaData.data.length; i++) {
             const container = document.getElementById('instafeed');
             let imgURL = instaData.data[i].images.standard_resolution.url;
             let imgDirectLink = instaData.data[i].link;
@@ -261,13 +263,13 @@ getGlucose();
             imgLink.setAttribute('href', imgDirectLink)
             div.appendChild(imgLink);
             imgLink.appendChild(img);
-        }
+        }*/
         console.log("retrieving instagram posts");
     } catch (error) {
         console.log(error);
     }
 }
-instaRequest(8);*/
+instaRequest(8);
 
 /*fetch("https://instagram47.p.rapidapi.com/public_user_posts?userid=1718924098", {
 	"method": "GET",
