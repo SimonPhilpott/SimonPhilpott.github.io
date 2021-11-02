@@ -186,7 +186,7 @@
 
 async function instaRequest(num) {
     try {
-	/*const accessToken = "EAACX4G0VdB4BAI7jA1jmsdRSBQvH0052KN28KH8enJpuPaSzw7vnUBG0b1LRqmZAnF4ENZBpfpm7MtCZCmcJ29VCjTOr0MYioPiG6EehtbS7pnB3e05uuOlr0o1vtdPWiEEsBBhLDzQmFq2Ib6MdYEwCsC4v7ZAVxZCmsdjXQWPbIztVOrkeF";
+	const accessToken = "IGQVJVSVZAwamRPdzlCZAmV2eU4tTVF2d2lIb2VDZAGhhVC1fUHBNNS1YcG9fUFNBQkUyT2VLOUU5TEQ3NTZALbHB4RXZAtd0xsNDd1M0lqWnh1ZAzhQaTR3ZA3hzWU1tRXhqWG5XeTE4dTNyRWQtMV9rNWo2RgZDZD";
 
 	const result = await fetch(`https://graph.instagram.com/me/media?access_token=${accessToken}&fields=media_url,media_type,caption,permalink`, {  
             method: 'GET',
@@ -206,15 +206,8 @@ async function instaRequest(num) {
             div.appendChild(imgLink);
             imgLink.appendChild(img);
         }
-        console.log("retrieving instagram posts");*/
+        console.log("retrieving instagram posts");
 	    
-/*TEST*/
-	 const accessToken = "EAACX4G0VdB4BAI7jA1jmsdRSBQvH0052KN28KH8enJpuPaSzw7vnUBG0b1LRqmZAnF4ENZBpfpm7MtCZCmcJ29VCjTOr0MYioPiG6EehtbS7pnB3e05uuOlr0o1vtdPWiEEsBBhLDzQmFq2Ib6MdYEwCsC4v7ZAVxZCmsdjXQWPbIztVOrkeF"
-	 const result = await fetch(`https://graph.instagram.com/me/media?fields=media_url,media_type,caption,permalink&access_token=${accessToken}`, {  
-            method: 'GET',
-          });
-	  let instaData = await result.json();
-	  console.log(instaData);
     } catch (error) {
         console.log(error);
     }
