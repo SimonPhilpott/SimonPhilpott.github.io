@@ -181,7 +181,7 @@
 
 }(window));
 // -----------------------------------------------------------------
-// | Instagram API                                           |
+// | Instagram API    refresh https://developers.facebook.com/apps/143923364308212/instagram-basic-display/basic-display/                                       |
 // -----------------------------------------------------------------
 
 async function instaRequest(num) {
