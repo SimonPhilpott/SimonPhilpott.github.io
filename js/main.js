@@ -186,11 +186,8 @@
 
 async function instaRequest(num) {
     try {
-	const accessToken = "EAACX4G0VdB4BAI7jA1jmsdRSBQvH0052KN28KH8enJpuPaSzw7vnUBG0b1LRqmZAnF4ENZBpfpm7MtCZCmcJ29VCjTOr0MYioPiG6EehtbS7pnB3e05uuOlr0o1vtdPWiEEsBBhLDzQmFq2Ib6MdYEwCsC4v7ZAVxZCmsdjXQWPbIztVOrkeF";
-	/*let tokenResult = await fetch (`https://graph.instagram.com/refresh_access_token?grant_type=ig_refresh_token&access_token=${accessToken}`, {  
-            method: 'GET',
-        });
-	console.log(tokenResult)*/
+	/*const accessToken = "EAACX4G0VdB4BAI7jA1jmsdRSBQvH0052KN28KH8enJpuPaSzw7vnUBG0b1LRqmZAnF4ENZBpfpm7MtCZCmcJ29VCjTOr0MYioPiG6EehtbS7pnB3e05uuOlr0o1vtdPWiEEsBBhLDzQmFq2Ib6MdYEwCsC4v7ZAVxZCmsdjXQWPbIztVOrkeF";
+
 	const result = await fetch(`https://graph.instagram.com/me/media?access_token=${accessToken}&fields=media_url,media_type,caption,permalink`, {  
             method: 'GET',
         });
@@ -209,7 +206,15 @@ async function instaRequest(num) {
             div.appendChild(imgLink);
             imgLink.appendChild(img);
         }
-        console.log("retrieving instagram posts");
+        console.log("retrieving instagram posts");*/
+	    
+/*TEST*/
+	 const accessToken = "EAACX4G0VdB4BAI7jA1jmsdRSBQvH0052KN28KH8enJpuPaSzw7vnUBG0b1LRqmZAnF4ENZBpfpm7MtCZCmcJ29VCjTOr0MYioPiG6EehtbS7pnB3e05uuOlr0o1vtdPWiEEsBBhLDzQmFq2Ib6MdYEwCsC4v7ZAVxZCmsdjXQWPbIztVOrkeF"
+	 const result = await fetch(`https://graph.instagram.com/me/media?fields=media_url,media_type,caption,permalink&access_token=${accessToken}`, {  
+            method: 'GET',
+          });
+	  let instaData = await result.json();
+	  console.log(instaData);
     } catch (error) {
         console.log(error);
     }
