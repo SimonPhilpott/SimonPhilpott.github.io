@@ -187,11 +187,14 @@
 async function instaRequest(num) {
     try {
 	const accessToken = "IGQVJXSDBIUU90MlpnZA2VZAeUtTaHc5SVJZAMTRNazMwTkJTQXdZALUw5Sm5YX2JMaHRWY1h2R2dUQ21XR2xBSTBMSjVYZA0M2VXpQMnpra0s4VHdseVU5elBTaFV5NTE0N1cxb0RmRjlocUNsclBOTzVMMAZDZD";
+	let tokenResult = await fetch (`https://graph.instagram.com/refresh_access_token?grant_type=ig_refresh_token&access_token=${accessToken}`, {  
+            method: 'GET',
+        });
+	console.log(tokenResult)
 	const result = await fetch(`https://graph.instagram.com/me/media?access_token=${accessToken}&fields=media_url,media_type,caption,permalink`, {  
             method: 'GET',
         });
         let instaData = await result.json();
-	    console.log(instaData)
         for (let i = 0; i < instaData.data.length; i++) {
             const container = document.getElementById('instafeed');
             let imgURL = instaData.data[i].media_url;
